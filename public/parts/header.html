@@ -5,26 +5,66 @@
 	<div class="top-nav block-with-lazy">
 		<div class="container">
 			<div class="top-nav__row row">
-				<div class="col-4"></div>
-				<div class="col order-lg-0 order-last">
+				<div class="col col-lg-auto">
+					<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+					</a>
+				</div>
+				<div class="top-nav__col col-auto col-lg order-lg-0 order-last">
+					<nav class="d-none d-lg-flex">
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">География проекта</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Номинации</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Совет</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+						</ul>
+					</nav>
 					<div class="menu-mobile menu-mobile--js">
 						<div class="menu-mobile__inner">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+							<div class="row">
+								<div class="col-md-auto">
+									<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+									</a>
+								</div>
+								<div class="top-nav__inner-col col-md">
+									<nav>
+										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">География проекта</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Номинации</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Совет</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+										</ul>
+									</nav>
+								</div>
+								<div class="top-nav__inner-col col-md-auto">
+									<a class="top-nav__lk" href="#">
+										<svg class="icon icon-lk ">
+											<use xlink:href="img/svg/sprite.svg#lk"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="top-nav__inner-col top-nav__inner-col--mnu-toggle col-md-auto">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</div>
+								</div>
 							</div>
-							<nav>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-								</ul>
-							</nav>
+							<a class="top-nav__btn btn btn-secondary d-md-none" href="#">Подать заявку
+							</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-auto d-lg-none">
-					<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+				<div class="col-md-auto order-last order-md-0">
+					<a class="top-nav__btn btn btn-secondary" href="#">Подать заявку
+					</a>
+				</div>
+				<div class="col-auto d-none d-md-block">
+					<a class="top-nav__lk" href="#">
+						<svg class="icon icon-lk ">
+							<use xlink:href="img/svg/sprite.svg#lk"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="col-auto ms-auto">
+					<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 					</div>
 				</div>
 			</div>

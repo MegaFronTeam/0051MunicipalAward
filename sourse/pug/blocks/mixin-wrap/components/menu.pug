@@ -1,6 +1,6 @@
 
 mixin mnu()
-	nav
+	nav&attributes(attributes)
 		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 			each link in nav
 				li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name

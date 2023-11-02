@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js
 		span
 mixin mob-mnu()
 	-
@@ -22,13 +22,24 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
+				.col.col-lg-auto
+					+e.logo(href='/'): +img('img/svg/logo.svg')
+				+e.col.col-auto.col-lg.order-lg-0.order-last
+					+mnu().d-none.d-lg-flex
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
+							.row
+								.col-md-auto
+									+e.logo(href='/'): +img('img/svg/logo.svg')
+								+e.inner-col.col-md
+									+mnu()
+								+e.inner-col.col-md-auto
+									+e.lk(href='#'): +icon('lk')
+								+e.inner-col--mnu-toggle.col-md-auto
+									+menu-toggle()
+							+e.btn.btn.btn-secondary.d-md-none(href='#') Подать заявку
+				.col-md-auto.order-last.order-md-0: +e.btn.btn.btn-secondary(href='#') Подать заявку
+				.col-auto.d-none.d-md-block: +e.lk(href='#'): +icon('lk')
+				.col-auto.ms-auto
 					+menu-toggle()
 	// end top-nav

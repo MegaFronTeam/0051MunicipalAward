@@ -17,6 +17,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
 }
+.icon-circle-right {
+	$h: 41;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(41 / #{$h} *1em );
+}
 .icon-fb {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -26,6 +31,11 @@
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-lk {
+	$h: 29;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(26 / #{$h} *1em );
 }
 .icon-telegram {
 	$h: 16;

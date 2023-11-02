@@ -1,11 +1,19 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
+		//- +img('img/headerBlock-bg.png','bg').picture-bg
+		picture.picture-bg
+			source(media="(min-width: 768px)", srcset="img/headerBlock-bg.png")
+			img(src="img/headerBlock-bg-sm.png", alt="").object-fit-js
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			h1 Всероссийская<br>#[+img('img/text-img-1.png')] муниципальная премия 
+				//- +img('img/text-img-2.png').text-img-2
+				picture
+					source(media="(min-width: 768px)", srcset="img/text-img-2.png")
+					img(src="img/text-img-2-sm.png", alt="").text-img-2
+				| «Служение»
+			+e.text Объединяет муниципальное сообщество страны и&nbsp;повышает престиж муниципальной службы.
+			+e.wrap
+				+icon('circle-right')
+				p Проводится по&nbsp;поручению Президента и&nbsp;присваивается выдающимся представителям муниципального сообщества&nbsp;&mdash; людям, которые внесли особый вклад в&nbsp;развитие муниципальных образований и&nbsp;повышение качества жизни граждан.
 	// end headerBlock
