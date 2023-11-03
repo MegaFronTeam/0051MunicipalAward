@@ -1,0 +1,84 @@
+// start .sNominations
+.sNominations {
+	--sPT: #{rem(46)};
+	--sPB: #{rem(51)};
+	--sTPB: #{rem(46)};
+	border-radius: rem(30);
+	background-color: $gray-900;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(84)};
+		--sPB: #{rem(68)};
+		--sTPB: #{rem(63)};
+	}
+	.section-title {
+		.h6 {
+			color: #fff;
+			line-height: 1.37;
+			text-transform: uppercase;
+			margin-bottom: 0;
+		}
+	}
+	.dd-group {
+		color: #fff;
+		border-top: 1px solid #fff;
+		&__item {
+			border-bottom: 1px solid #fff;
+			&.active {
+				.dd-group__head {
+					&:after {
+						transform: rotateX(180deg);
+					}
+				}
+			}
+		}
+		&__head {
+			font-size: rem(20);
+			line-height: 2;
+			padding: rem(23) rem(50) rem(23) 0;
+			cursor: pointer;
+			position: relative;
+			&:after {
+				@include mt;
+				content: '';
+				position: absolute;
+				display: block;
+				width: rem(41);
+				height: rem(41);
+				background-image: url("data:image/svg+xml,%3Csvg width='41' height='41' viewBox='0 0 41 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20.5' cy='20.5' r='20' transform='rotate(90 20.5 20.5)' stroke='white'/%3E%3Cpath d='M30.4043 17.5056L20.2615 27.6484L10.1188 17.5056' stroke='white'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				top: rem(23);
+				right: rem(3);
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: rem(25);
+				padding: rem(26) 0;
+			}
+			span {
+				display: block;
+				font-size: rem(13);
+				color: rgba(0, 0, 0, 0.70);
+				line-height: 1.07;
+				text-transform: uppercase;
+			}
+		}
+		&__content {
+			padding-bottom: rem(23);
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(41);
+			}
+			p {
+				margin-bottom: 0;
+				line-height: 1.37;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNominations

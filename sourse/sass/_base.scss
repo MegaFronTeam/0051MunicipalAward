@@ -538,10 +538,8 @@ iframe {
 	}
 }
 
-.ratiod{
-	@include block(2,3);
-	background-color: $primary;
-	max-width: 340px;
-	margin-left: auto;
-	margin-right: auto;
+.dd-group {
+	&__content {
+		display: none;
+	}
 }
