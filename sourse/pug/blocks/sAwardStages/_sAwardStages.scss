@@ -1,0 +1,117 @@
+// start .sAwardStages
+.sAwardStages {
+	--sPT: #{rem(44)};
+	--sPB: #{rem(52)};
+	--sTPB: #{rem(44)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(54)};
+		--sPB: #{rem(29.5)};
+		--sTPB: #{rem(46)};
+	}
+	&__swiper {
+		--slideCount: 1;
+    --sliderGutter: 0px;
+		overflow: visible;
+		margin-right: calc(var(--sliderGutter)*-1);
+		@include media-breakpoint-up(sm) {
+			--slideCount: 2;
+			--sliderGutter: #{rem(10)};
+		}
+		@include media-breakpoint-up(md) {
+			--slideCount: 3;
+		}
+		@include media-breakpoint-up(lg) {
+			--slideCount: 4;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-left: calc(var(--bs-gutter-x) / -2);
+			margin-right: calc(var(--bs-gutter-x) / -2);
+		}
+
+		.swiper-button-hand {
+			background-color: transparent;
+			border: none;
+			width: rem(42);
+			height: rem(42);
+			box-shadow: none;
+
+			--swiperArrowPosition: #{rem(20)};
+			--swiperColorDef: #fff;
+
+			@include media-breakpoint-up(lg) {
+				--swiperArrowPosition: #{rem(40)};
+				width: rem(100);
+				height: rem(100);
+			}
+			@include media-breakpoint-up(xl) {
+				width: rem(154);
+				height: rem(154);
+				--swiperArrowPosition: #{rem(80)};
+			}
+			.icon {
+				height: 1em;
+				width: 1em;
+				fill: none;
+				stroke: currentColor;
+				stroke-width: 3px;
+				font-size: rem(28);
+				@include media-breakpoint-up(lg) {
+					font-size: rem(100);
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: rem(154);
+				}
+			}
+		}
+	}
+	&__slide {
+		margin-right: calc(var(--sliderGutter));
+    width: calc(100% / var(--slideCount) - var(--sliderGutter));
+		height: auto;
+	}
+	&__item {
+		@include block(278, 320);
+		display: flex;
+		flex-direction: column;
+		padding: rem(20) rem(27) rem(14);
+		border-radius: 30px;
+		background-color: $secondary;
+		color: #fff;
+		height: 100%;
+    width: 100%;
+		text-align: center;
+		&:hover {
+			background-color: $secondary;
+			color: #fff;
+		}
+		@include media-breakpoint-up(sm) {
+			--ratio: 320/335;
+			border-radius: 0;
+			background-color: $gray-300;
+			color: $gray-600;
+			text-align: left;
+			padding: rem(20) rem(20) rem(14);
+		}
+		.h4 {
+			margin-top: auto;
+			font-size: rem(20);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(22);
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: rem(25);
+			}
+		}
+	}
+	&__date {
+		line-height: 1.37;
+		margin-bottom: rem(14);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAwardStages

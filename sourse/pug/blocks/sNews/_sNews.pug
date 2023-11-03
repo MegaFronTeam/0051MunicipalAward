@@ -1,0 +1,19 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.section-title
+				.h6 Новости
+			mixin item(img, date, title, text)
+				+e.item(href='#')
+					+e.img-wrap.bg-wrap
+						+img(`img/${img}`, 'bg').picture-bg
+						+e.date!= date
+						.h4!= title
+					p!= text
+			+e.row.row
+				.col-sm-6
+					+item('sNews-img-1.jpg', '1 ноября', 'Lorem ipsum dolor sit amet consectetur', 'Lorem ipsum dolor sit amet consectetur. Semper montes enim risus fusce tortor tincidunt cursus. Laoreet sit netus et sit hendrerit. Eget id ac quis dui ornare enim nibh interdum nunc. Ut ipsum bibendum parturient ut nulla eu sed diam.')
+				.col-sm-6
+					+item('sNews-img-2.jpg', '25 ноября', 'Lorem ipsum dolor sit amet consectetur', 'Lorem ipsum dolor sit amet consectetur. Semper montes enim risus fusce tortor tincidunt cursus. Laoreet sit netus et sit hendrerit. Eget id ac quis dui ornare enim nibh interdum nunc. Ut ipsum bibendum parturient ut nulla eu sed diam.')
+	// end sNews

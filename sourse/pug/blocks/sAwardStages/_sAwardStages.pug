@@ -1,0 +1,23 @@
+mixin sAwardStages(data)
+	// start sAwardStages
+	+b.SECTION.sAwardStages.section#sAwardStages&attributes(attributes)
+		.container
+			+b.section-title
+				.h6 Этапы премии
+			mixin slide(date, title)
+				+e.slide.swiper-slide
+					+e.item(href='#')
+						+e.date!= date
+						.h4!= title
+			+e.swiper.def-slider-js.swiper
+				.swiper-wrapper
+					+slide('1&nbsp;ноября&nbsp;&mdash; 24&nbsp;ноября', 'Подача заявок участниками')
+					+slide('24 ноября', 'Анализ заявок на&nbsp;соответствие критериям номинаций с&nbsp;применением искусственного интеллекта')
+					+slide('24&nbsp;ноября&nbsp;&mdash; 3&nbsp;декабря', 'Техническая экспертиза')
+					+slide('4&nbsp;&mdash; 7&nbsp;декабря', 'Экспертиза участниками')
+					+slide('1&nbsp;ноября&nbsp;&mdash; 24&nbsp;ноября', 'Подача заявок участниками')
+					+slide('24 ноября', 'Анализ заявок на&nbsp;соответствие критериям номинаций с&nbsp;применением искусственного интеллекта')
+					+slide('24&nbsp;ноября&nbsp;&mdash; 3&nbsp;декабря', 'Техническая экспертиза')
+					+slide('4&nbsp;&mdash; 7&nbsp;декабря', 'Экспертиза участниками')
+				+arrow
+	// end sAwardStages

@@ -62,6 +62,27 @@ function eventHandler() {
 
 	});
 
+	let defSliders = document.querySelectorAll('.def-slider-js');
+	if (defSliders.length > 0) {
+		defSliders.forEach((defSlider) => {
+			new Swiper(defSlider, {
+				slidesPerView: 'auto',
+				loop: true,
+				loopAdditionalSlides: 1,
+				centeredSlides: defSlider.dataset.centered ? true : false,
+				navigation: {
+					nextEl: defSlider.querySelector('.swiper-button-next'),
+					prevEl: defSlider.querySelector('.swiper-button-prev'),
+				},
+				pagination: {
+					el: defSlider.querySelector('.swiper-pagination'),
+					type: 'bullets',
+					clickable: true,
+				},
+			});
+		});
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

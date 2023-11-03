@@ -5,6 +5,9 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 
 include ../blocks/sNominations/_sNominations.pug
+include ../blocks/sAwardStages/_sAwardStages.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sSupervisory/_sSupervisory.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -21,8 +24,10 @@ block pagecontent
 	main
 		+headerBlock 
 		+sNominations
-		
-	//- +parts('footer')
+		+sAwardStages
+		+sNews
+		+sSupervisory
+	+parts('footer')
       
 
 
