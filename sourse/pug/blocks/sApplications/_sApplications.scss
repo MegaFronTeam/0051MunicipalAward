@@ -1,0 +1,55 @@
+// start .sApplications
+.sApplications {
+	--sPT: #{rem(23)};
+	--sPB: #{rem(42)};
+	--sTPB: #{rem(27)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(59)};
+		--sPB: #{rem(65)};
+		--sTPB: #{rem(78)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		h2 {
+			font-weight: 400;
+			@include media-breakpoint-down(md) {
+				font-size: rem(20);
+			}
+		}
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+	svg {
+		width: 100%;
+		overflow: visible;
+		g {
+			&.reg-1, &.reg-2, &.reg-3, &.reg-4, &.reg-5, &.reg-6, &.reg-7, &.reg-8 {
+				&:hover {
+					path {
+						cursor: pointer;
+						fill: $primary;
+						stroke: $primary;
+						filter: drop-shadow(0px 0px 13px #D2A35F);
+					}
+				}
+			}
+		}
+		path {
+			@include mt;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sApplications
