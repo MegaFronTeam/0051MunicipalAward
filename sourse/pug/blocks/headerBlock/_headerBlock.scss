@@ -6,6 +6,20 @@
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	padding-top: calc(rem(75) + var(--sPT));
+	// &::before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	display: block;
+	// 	width: calc(100% - rem(2));
+	// 	height: calc(100% - rem(2));
+	// 	top: rem(1);
+	// 	left: rem(1);
+	// 	z-index: -1;
+	// }
+	background-color: #be9965;
+	// & > picture {
+	// 	background-color: #fff;
+	// }
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(160)};
 		--sPB: #{rem(137)};

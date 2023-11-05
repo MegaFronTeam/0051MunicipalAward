@@ -89,9 +89,12 @@ function eventHandler() {
 	if (sApplicationsCards.length > 0 && sApplicationsMapClass.length > 0) {
 		document.addEventListener('click', (e) => {
 			let sApplicationsCardTarget = e.target.closest('.sApplications__item');
-			let sApplicationsCardTargetID = sApplicationsCardTarget.getAttribute('id');
+			let sApplicationsMapTarget = e.target.closest('.sApplications__map g');
+			
+			if (sApplicationsCardTarget) {
+				let sApplicationsCardTargetID = sApplicationsCardTarget.getAttribute('id');
 
-			if (sApplicationsCardTargetID) {
+
 				sApplicationsCards.forEach((item) => item.classList.remove('active'));
 				sApplicationsCardTarget.classList.toggle('active');
 
@@ -99,6 +102,21 @@ function eventHandler() {
 					mapClass.classList.remove('active');
 					if (mapClass.classList[0] === sApplicationsCardTargetID) {
 						mapClass.classList.toggle('active');
+					};
+				});
+			};
+
+			
+			if (sApplicationsMapTarget) {
+				let sApplicationsMapTargetClass = sApplicationsMapTarget.classList[0];
+
+				sApplicationsMapClass.forEach((item) => item.classList.remove('active'));
+				sApplicationsMapTarget.classList.toggle('active');
+
+				sApplicationsCards.forEach((cardsClass) => {
+					cardsClass.classList.remove('active');
+					if (cardsClass.getAttribute('id') === sApplicationsMapTargetClass) {
+						cardsClass.classList.toggle('active');
 					};
 				});
 			};

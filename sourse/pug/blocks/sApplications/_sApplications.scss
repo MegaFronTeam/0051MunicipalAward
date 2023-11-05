@@ -19,17 +19,6 @@
 	&__map {
 		position: relative;
 		margin: rem(-89px) 0 rem(-55) 0;
-		.line {
-			position: absolute;
-			&--1 {
-				top: 11%;
-				left: 14%;
-				width: 24%;
-				height: 37%;
-				max-width: 75%;
-				z-index: 1;
-			}
-		}
 	}
 	svg {
 		overflow: visible;
@@ -42,9 +31,9 @@
 		}
 		g {
 			&.reg-1, &.reg-2, &.reg-3, &.reg-4, &.reg-5, &.reg-6, &.reg-7, &.reg-8 {
-				&.active {
+				&:hover, &.active {
 					path {
-						// cursor: pointer;
+						cursor: pointer;
 						fill: $primary;
 						stroke: $primary;
 						filter: drop-shadow(0px 0px 13px #D2A35F);
@@ -131,6 +120,13 @@
 			font-size: rem(20);
 			line-height: 1.35;
 			font-weight: 700;
+		}
+		.line {
+			position: absolute;
+			&--1 {
+				top: 100%;
+				left: 14%;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}
