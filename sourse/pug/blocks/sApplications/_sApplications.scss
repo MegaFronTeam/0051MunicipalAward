@@ -8,6 +8,14 @@
 		--sPB: #{rem(65)};
 		--sTPB: #{rem(78)};
 	}
+	& > picture {
+		img {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+		}
+	}
 	.section-title{
 		h2 {
 			font-weight: 400;
@@ -18,7 +26,7 @@
 	}
 	&__map {
 		position: relative;
-		margin: rem(-89px) 0 rem(-55) 0;
+		margin: rem(-89px) 0 rem(-74.200) 0;
 	}
 	svg {
 		overflow: visible;
@@ -32,13 +40,41 @@
 		g {
 			&.reg-1, &.reg-2, &.reg-3, &.reg-4, &.reg-5, &.reg-6, &.reg-7, &.reg-8 {
 				&:hover, &.active {
-					path {
+					& > path {
 						cursor: pointer;
 						fill: $primary;
 						stroke: $primary;
 						filter: drop-shadow(0px 0px 13px #D2A35F);
 					}
+					g {
+						opacity: 1;
+					}
 				}
+			}
+			&.reg-2 {
+
+			}
+			&.reg-3 {
+
+			}
+			&.reg-4 {
+
+			}
+			&.reg-5 {
+
+			}
+			&.reg-6 {
+
+			}
+			&.reg-7 {
+
+			}
+			&.reg-8 {
+
+			}
+			g {
+				@include mt;
+				opacity: 0;
 			}
 		}
 		path {

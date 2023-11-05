@@ -115,6 +115,10 @@
 		@include media-breakpoint-up(lg) {
 			padding: rem(27) rem(28);
 		}
+		@include media-breakpoint-down(sm) {
+			margin-left: calc(var(--bs-gutter-x) / -2);
+			margin-right: calc(var(--bs-gutter-x) / -2);
+		}
 		p {
 			margin: 0 auto;
 			max-width: rem(718);

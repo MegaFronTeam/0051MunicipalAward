@@ -204,6 +204,7 @@
 	}
 	.top-nav__btn {
 		margin-bottom: rem(48);
+		max-width: rem(198);
 		@include media-breakpoint-up(md)  {
 			margin-bottom: 0;
 		}
