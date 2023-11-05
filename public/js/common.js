@@ -83,6 +83,28 @@ function eventHandler() {
 		});
 	}
 
+	let sApplicationsCards = document.querySelectorAll('.sApplications__item');
+	let sApplicationsMapClass = document.querySelectorAll('.sApplications__map g');
+	
+	if (sApplicationsCards.length > 0 && sApplicationsMapClass.length > 0) {
+		document.addEventListener('click', (e) => {
+			let sApplicationsCardTarget = e.target.closest('.sApplications__item');
+			let sApplicationsCardTargetID = sApplicationsCardTarget.getAttribute('id');
+
+			if (sApplicationsCardTargetID) {
+				sApplicationsCards.forEach((item) => item.classList.remove('active'));
+				sApplicationsCardTarget.classList.toggle('active');
+
+				sApplicationsMapClass.forEach((mapClass) => {
+					mapClass.classList.remove('active');
+					if (mapClass.classList[0] === sApplicationsCardTargetID) {
+						mapClass.classList.toggle('active');
+					};
+				});
+			};
+		});
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

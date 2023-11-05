@@ -78,6 +78,10 @@
 		color: #fff;
 		line-height: 1.37;
 	}
+	&__btn {
+		width: 100%;
+		max-width: rem(198);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

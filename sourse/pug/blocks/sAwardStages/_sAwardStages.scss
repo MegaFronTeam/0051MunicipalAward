@@ -16,6 +16,7 @@
 		@include media-breakpoint-up(sm) {
 			--slideCount: 2;
 			--sliderGutter: #{rem(10)};
+			margin-bottom: rem(10);
 		}
 		@include media-breakpoint-up(md) {
 			--slideCount: 3;
@@ -106,6 +107,20 @@
 	&__date {
 		line-height: 1.37;
 		margin-bottom: rem(14);
+	}
+	&__text {
+		border: 1px solid $secondary;
+		padding: rem(37) rem(28);
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			padding: rem(27) rem(28);
+		}
+		p {
+			margin: 0 auto;
+			max-width: rem(718);
+			line-height: 1.37;
+			margin-bottom: 0;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
