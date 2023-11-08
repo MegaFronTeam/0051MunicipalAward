@@ -74,9 +74,9 @@
 			}
 		}
 		textarea {
-			max-width: 320px;
 			height: 149px;
 			@include media-breakpoint-up(md) {
+				max-width: 320px;
 				height: 106px;
 			}
 			& + span {
@@ -151,10 +151,21 @@
 				}
 			}
 		}
+		.invalid-feedback {
+			@include media-breakpoint-up(lg) {
+				left: 220px;
+			}
+		}
 	}
 	.form-wrap__btn-wrap {
 		margin-bottom: 16px;
 		text-align: end;
+	}
+
+	.invalid-feedback {
+		@include media-breakpoint-up(lg) {
+			left: 110px;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}

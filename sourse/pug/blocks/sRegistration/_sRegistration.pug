@@ -23,11 +23,12 @@ mixin sRegistration(data)
 					.card
 						+form-wrap
 							+e.descr Все поля обязательны для&nbsp;заполнения
-							+input('', 'email', 'e-mail').invalid
+							+input('', 'email', 'e-mail').is-invalid
+								.invalid-feedback Такой email уже существует
 							+input('', 'tel', 'телефон')
 							+input('', 'text', 'Фамилия')
 							+input('', 'text', 'Имя')
-							+input('', 'text', 'отчество').invalid
+							+input('', 'text', 'отчество').is-invalid
 							+e.pass-wrap
 								+input('', 'password', 'Пароль')
 								+input('', 'password', 'повтор пароля')
