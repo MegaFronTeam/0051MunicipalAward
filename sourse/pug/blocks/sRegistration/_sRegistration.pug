@@ -1,0 +1,36 @@
+mixin sRegistration(data)
+	// start sRegistration
+	+b.SECTION.sRegistration.section#sRegistration&attributes(attributes)
+		.container
+			.tabs 
+				+e.tabs-caption.tabs__caption
+					+e.tabs-btn.tabs__btn.active Авторизация
+					+e.tabs-btn.tabs__btn Регистрация
+				.tabs__content.active
+					.card
+						+form-wrap
+							+input('', 'text', 'Логин')
+							+input('', 'password', 'Пароль')
+							+input('', 'textarea', 'Я не робот')
+							+e.descr Если у Вас нет аккаунта, Вы можете его #[a(href="#") зарегистрировать]
+							+e.auth-row
+								+e.btn.btn.btn-info(href="#") ВОЙТИ через VK
+								+e.btn.btn.btn-info(href="#") ВОЙТИ через OK
+								+e.btn.btn.btn-gold.BUTTON ВОЙТИ
+							+e.forgot-link
+								a(href="#") Забыли пароль?
+				.tabs__content
+					.card
+						+form-wrap
+							+e.descr Все поля обязательны для заполнения
+							+input('', 'email', 'e-mail').invalid
+							+input('', 'tel', 'телефон')
+							+input('', 'text', 'Фамилия')
+							+input('', 'text', 'Имя')
+							+input('', 'text', 'отчество').invalid
+							+e.pass-wrap
+								+input('', 'password', 'Пароль')
+								+input('', 'password', 'повтор пароля')
+							+e.btn.btn.btn-gold.BUTTON регистрация
+							+policy
+	// end sRegistration

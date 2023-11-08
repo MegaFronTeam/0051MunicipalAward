@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Подача заявки</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head bg-wrap">
+					<picture class="picture-bg">
+						<source media="(min-width: 768px)" srcset="img/pageHead-bg.png"/><img class="object-fit-js" src="img/pageHead-bg-sm.png" alt=""/>
+					</picture>
+					<div class="container">
+						<h1>Подача заявки на&nbsp;участие в&nbsp;конкурсе</h1>
+					</div>
+				</div>
+				<!-- start sApplication-->
+				<section class="sApplication section" id="sApplication">
+					<div class="container">
+						<div class="sApplication__steps">
+							<div class="sApplication__step active">Шаг 1
+							</div>
+							<div class="sApplication__step">Шаг 2
+							</div>
+						</div>
+						<div class="card">
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__row row">
+										<div class="form-wrap__col col-md">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">инн</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder=""/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-md">
+											<div class="form-wrap__input-wrap form-wrap__input-wrap--select form-group">
+												<label><span class="form-wrap__input-title">Номинация</span>
+													<select class="form-wrap__input form-select" name="select">
+														<option value=""></option>
+														<option value=" placeholder 1">placeholder 1</option>
+														<option value=" placeholder 2">placeholder 2</option>
+														<option value=" placeholder 3">placeholder 3</option>
+														<option value=" placeholder 4">placeholder 4</option>
+													</select>
+												</label>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Название проекта</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder=""/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-12">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Отрасль</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder=""/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-12">
+											<label class="custom-input form-check"><span class="custom-input__text form-check-label">Возможность предоставить видео-презентацию</span><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+											</label>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sApplication-->
+			</main>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
