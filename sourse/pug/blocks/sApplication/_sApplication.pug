@@ -25,7 +25,18 @@ mixin sApplication(data)
 						.col-12
 							+input('', 'text', 'Отрасль')
 						.col-12
-							+in-c('checkbox', 'Возможность предоставить видео-презентацию')
-						
-
+							+in-c('checkbox', 'Возможность предоставить видео-презентацию').order-last
+						.col-12
+							.form-wrap__input-wrap.form-group
+								label
+									span.form-wrap__input-title КОНТАКТЫ
+									input(inputmode="text" name="tel" type="text" placeholder="ТЕЛЕФОН").form-wrap__input.form-wrap__input--tel.form-control
+									input(inputmode="text" name="text" type="text" placeholder="ССЫЛКА").form-wrap__input.form-control
+						.col-12
+							.form-wrap__input-wrap.form-wrap__input-wrap--radio.form-group
+								label
+									span.form-wrap__input-title ТИП ЗАЯВКИ
+									+in-c('radio', 'ГРУППОВАЯ', 'type')
+									+in-c('radio', 'ОДИНОЧНАЯ', 'type')
+					+e.btn.btn.btn-gold(href='#') Далее
 	// end sApplication
