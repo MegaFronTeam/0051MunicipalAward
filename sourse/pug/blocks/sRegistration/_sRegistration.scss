@@ -1,9 +1,16 @@
 // start .sRegistration
 .sRegistration {
-	// --sPT: #{rem()};
+	--sPT: #{rem(31)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(61)};
+		background-image: url('../img/reg-bg.svg');
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: 100% auto;
+	}
+
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -11,7 +18,10 @@
 	&__tabs-caption {
 		display: flex;
 		justify-content: center;
-		margin-bottom: 61px;
+		margin-bottom: 58px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 71px;
+		}
 	}
 	&__tabs-btn {
 		position: relative;
@@ -41,7 +51,13 @@
 			background-color: $gray-400;
 		}
 	}
-
+	
+	.card {
+		padding-top: rem(22);
+		@include media-breakpoint-up(md) {
+			padding-top: rem(73);
+		}
+	}
 	.form-wrap {
 		margin: 0 auto;
 		max-width: 650px;
@@ -59,10 +75,19 @@
 		}
 		textarea {
 			max-width: 320px;
-			height: 106px;
+			height: 149px;
+			@include media-breakpoint-up(md) {
+				height: 106px;
+			}
+			& + span {
+				align-self: flex-start;
+			}
 		}
 		&__descr {
-			margin-bottom: 32px;
+			margin-bottom: 19px;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 32px;
+			}
 			&--policy {
 				text-align: center;
 				@include media-breakpoint-up(lg) {
@@ -80,8 +105,10 @@
 		&__auth-row {
 			display: flex;
 			flex-wrap: wrap;
-			.form-wrap__btn:not(:last-child) {
-				margin-right: rem(20);
+			@include media-breakpoint-up(md) {
+				.form-wrap__btn:not(:last-child) {
+					margin-right: rem(20);
+				}
 			}
 		}
 		&__btn {
@@ -111,9 +138,10 @@
 		}
 	}
 	.form-wrap__pass-wrap {
-		padding-top: rem(52);
+		padding-top: rem(43);
 		margin-bottom: rem(32);
 		@include media-breakpoint-up(lg) {
+			padding-top: rem(52);
 			margin-bottom: 0;
 		}
 		.form-wrap__input-wrap{
@@ -125,6 +153,7 @@
 		}
 	}
 	.form-wrap__btn-wrap {
+		margin-bottom: 16px;
 		text-align: end;
 	}
 

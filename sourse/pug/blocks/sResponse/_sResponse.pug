@@ -3,7 +3,8 @@ mixin sResponse(heading)
 	+b.SECTION.sResponse.section#sResponse&attributes(attributes)
 		.container
 			.card
-				+e.heading.P= heading
+				+e.heading
+					p= heading
 				if block
 					block
 	// end sResponse

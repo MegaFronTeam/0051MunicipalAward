@@ -1,10 +1,12 @@
 // start .sResponse
 .sResponse {
-	// --sPT: #{rem()};
+	// --sPT: #{rem(53)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 
 	.card {
+		padding-top: rem(53);
+		padding-bottom: rem(53);
 		text-align: center;
 		@include media-breakpoint-up(lg) {
 			font-size: rem(25);
@@ -12,14 +14,15 @@
 	}
 
 	&__heading {
-		margin-bottom: 18px;
+		margin-bottom: 28px;
 		color: $gold;
 	}
 
-	p:not(.sResponse__heading) {
-		margin-bottom: 0;
+	div:not(.sResponse__heading) {
+		p {
+			margin-bottom: 0;
+		}
 	}
-	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
