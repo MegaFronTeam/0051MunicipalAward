@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sResponse/_sResponse.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Регистрация'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Авторизация или регистрация')
+		+sResponse('Спасибо  за регистрацию!')
+			p Ваша учетная запись успешно&nbsp;создана.
+			p На&nbsp;ваш e-mail было отправлено письмо с&nbsp;вашими данными.
+	//- +parts('footer')

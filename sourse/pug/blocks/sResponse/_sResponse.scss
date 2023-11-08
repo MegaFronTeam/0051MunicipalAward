@@ -1,0 +1,33 @@
+// start .sResponse
+.sResponse {
+	// --sPT: #{rem(53)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	.card {
+		padding-top: rem(53);
+		padding-bottom: rem(53);
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(25);
+		}
+	}
+
+	&__heading {
+		margin-bottom: 28px;
+		color: $gold;
+	}
+
+	div:not(.sResponse__heading) {
+		p {
+			margin-bottom: 0;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sResponse

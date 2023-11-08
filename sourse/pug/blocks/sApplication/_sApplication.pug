@@ -85,14 +85,14 @@ mixin sApplication2(data)
 									+addMore(): +input('ССЫЛКА', 'text')
 						.col-12
 							+input('', 'textarea', 'награды от главы, от&nbsp;губернаторов')
-					.col-12
-							+e.input-file-row.row 
-								+e.input-file-col.col
-									+e.input-file-title письма поддержки
-								.col-lg
-									+addMore()
-										+upload-field
-								.col-lg
+						.col-12
+								+e.input-file-row.row 
+									+e.input-file-col.col
+										+e.input-file-title письма поддержки
+									.col-lg
+										+addMore()
+											+upload-field
+									.col-lg
 					+e.auth-row
 						+e.btn.btn.btn-info(href="#") Назад
 						+e.btn.btn.btn-gold.BUTTON ПОДАТЬ ЗАЯВКУ
