@@ -26,6 +26,12 @@
 			text-align: center;
 		}
 	}
+	textarea {
+		min-height: rem(266);
+		@include media-breakpoint-up(md) {
+			min-height: rem(199);
+		}
+	}
 	&__btn {
 		cursor: pointer;
 		margin-bottom: rem(15);
@@ -93,7 +99,11 @@
 		&:focus {
 			box-shadow: none;
 		}
+		&:active {
+			filter: none;
+		}
 	}
+
 }
 
 //

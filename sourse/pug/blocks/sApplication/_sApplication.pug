@@ -38,5 +38,62 @@ mixin sApplication(data)
 									span.form-wrap__input-title ТИП ЗАЯВКИ
 									+in-c('radio', 'ГРУППОВАЯ', 'type')
 									+in-c('radio', 'ОДИНОЧНАЯ', 'type')
-					+e.btn.btn.btn-gold(href='#') Далее
+					+e.btn.btn.btn-gold.ms-auto(href='#') Далее
+	// end sApplication
+
+mixin sApplication2(data)
+	// start sApplication
+	+b.SECTION.sApplication.section#sApplication&attributes(attributes)
+		.container
+			+e.steps
+				+e.step Шаг 1
+				+e.step.active Шаг 2
+			.card
+				+form-wrap
+					+e.row.row
+						.col-12
+							+input('', 'text', 'описание проекта:')
+						.col-12
+							+input('', 'textarea', 'Проблематика')
+						.col-12
+							+input('', 'textarea', 'Действие/решение')
+						.col-12
+							+input('', 'textarea', 'Результат')
+						.col-12
+							.form-wrap__input-wrap.form-wrap__input-wrap--budget-radio.form-group
+								label
+									span.form-wrap__input-title Привлеченный<br>бюджет
+									+in-c('radio', 'ДА', 'budget')
+									+in-c('radio', 'нет', 'budget')
+						.col-12
+							+e.input-file-row.row 
+								+e.input-file-col.col
+									+e.input-file-title Отзывы
+								.col-lg
+									+addMore()
+										+upload-field
+								.col-lg
+									+addMore(): +input('ССЫЛКА', 'text')
+						.col-12
+							+e.input-file-row.row 
+								+e.input-file-col.col
+									+e.input-file-title наличие упоминаний в СМИ
+								.col-lg
+									+addMore()
+										+upload-field
+								.col-lg
+									+addMore(): +input('ССЫЛКА', 'text')
+						.col-12
+							+input('', 'textarea', 'награды от главы, от&nbsp;губернаторов')
+					.col-12
+							+e.input-file-row.row 
+								+e.input-file-col.col
+									+e.input-file-title письма поддержки
+								.col-lg
+									+addMore()
+										+upload-field
+								.col-lg
+					+e.auth-row
+						+e.btn.btn.btn-info(href="#") Назад
+						+e.btn.btn.btn-gold.BUTTON ПОДАТЬ ЗАЯВКУ
 	// end sApplication

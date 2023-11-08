@@ -60,3 +60,18 @@ mixin auth()
 				.tabs__btn.active Авторизация
 				.tabs__btn Регистрация
 			.tabs__content
+
+mixin addMore()
+	+b.addMore
+		block
+		+e.plus: +icon('plus')
+
+mixin upload-field(title)
+	+b.upload-field
+		+e.wrap
+			+e.input-wrap
+				+e.LABEL.btn.btn.btn-outline-primary
+					input.input-upload(type='file' name='file')
+					span прикрепить файл
+					+icon('clip')
+			+e.file-name 

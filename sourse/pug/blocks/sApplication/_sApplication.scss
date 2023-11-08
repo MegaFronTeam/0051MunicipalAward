@@ -98,6 +98,50 @@
 					}
 				}
 			}
+			&--budget-radio {
+				label {
+					flex-wrap: wrap;
+					flex-direction: row;
+				}
+				.form-wrap__input-title {
+					width: 100%;
+					@include media-breakpoint-up(lg) {
+						width: auto;
+					}
+				}
+				.custom-input {
+					width: auto;
+					position: relative;
+					flex-direction: row;
+					align-items: center;
+					&:not(:last-of-type) {
+						margin-right: rem(36);
+						@include media-breakpoint-up(lg) {
+							margin-right: rem(59);
+						}
+					}
+					&__text {
+						margin-right: rem(32);
+						margin-bottom: 0;
+					}
+					&__input {
+						border-radius:0;
+						margin-top: 0;
+						order: 1;
+						width: rem(46);
+						height: rem(46);
+						border-color: $primary;
+						background-size: 34px;
+						background-position: center;
+						background-repeat: no-repeat;
+						border-radius: 0;
+						&:checked {
+							background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='8.26827' y1='24.5317' x2='24.5317' y2='8.26824' stroke='%23153C88'/%3E%3Cline x1='25.0246' y1='25.2388' x2='8.76116' y2='8.97535' stroke='%23153C88'/%3E%3C/svg%3E%0A");
+							background-color: #fff;
+						}
+					}
+				}
+			}
 		}
 		&__input {
 			&--tel {
@@ -112,10 +156,37 @@
 		&__btn {
 			display: block;
 			width: 100%;
-			margin-left: auto;
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(md) {
 				max-width: rem(198);
 			}
+		}
+		&__auth-row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			gap: 0 rem(34);
+		}
+		&__input-file-row {
+			--bs-gutter-x: #{rem(46)};
+			--bs-gutter-y: #{rem(24)};
+
+			align-items: center;
+		}
+		&__input-file-title {
+			color: $primary;
+			font-size: rem(16);
+			font-weight: 700;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+		&__input-file-col {
+			@include media-breakpoint-up(lg) {
+				max-width: rem(220);
+			}
+		}
+		&__input-file {
+			display: flex;
+			align-items: center;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
