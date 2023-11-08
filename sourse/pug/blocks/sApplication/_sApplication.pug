@@ -1,6 +1,7 @@
 mixin sApplication(data)
 	// start sApplication
-	+b.SECTION.sApplication.section#sApplication&attributes(attributes)
+	+b.SECTION.sApplication.bg-wrap.section#sApplication&attributes(attributes)
+		+img('img/sApplication-bg.png').picture-bg
 		.container
 			+e.steps
 				+e.step.active Шаг 1
@@ -43,7 +44,8 @@ mixin sApplication(data)
 
 mixin sApplication2(data)
 	// start sApplication
-	+b.SECTION.sApplication.section#sApplication&attributes(attributes)
+	+b.SECTION.sApplication.bg-wrap.section#sApplication&attributes(attributes)
+		+img('img/sApplication-bg.png').picture-bg
 		.container
 			+e.steps
 				+e.step Шаг 1

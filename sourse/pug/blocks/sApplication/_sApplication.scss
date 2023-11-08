@@ -11,6 +11,15 @@
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 	}
+	.picture-bg {
+		width: auto;
+		display: none;
+		left: 50%;
+		transform: translateX(-50%);
+		@include media-breakpoint-up(lg) {
+			display: block;
+		}
+	}
 	.section-title{
 		
 	}

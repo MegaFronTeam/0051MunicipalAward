@@ -8,16 +8,23 @@
 		padding-top: rem(53);
 		padding-bottom: rem(53);
 		text-align: center;
+		min-height: rem(243);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 		@include media-breakpoint-up(lg) {
 			font-size: rem(25);
 		}
 	}
 
 	&__heading {
-		margin-bottom: 28px;
 		color: $gold;
 	}
 
+	&__wrap {
+		margin-top: 28px;
+	}
 	div:not(.sResponse__heading) {
 		p {
 			margin-bottom: 0;
