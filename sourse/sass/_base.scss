@@ -494,6 +494,13 @@ iframe {
 	// @include row-sw(10px, sm, 100px);
 }
 
+.btn-gold, .btn-info {
+	--bs-btn-color: #{$white};
+	--bs-btn-hover-color: #{$white};
+	--bs-btn-active-color: #{$white};
+	text-transform: uppercase;
+}
+
 
 
 

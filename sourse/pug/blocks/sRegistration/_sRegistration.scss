@@ -1,0 +1,106 @@
+// start .sRegistration
+.sRegistration {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	&__tabs-caption {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 61px;
+	}
+	&__tabs-btn {
+		position: relative;
+		color: $gray-400;
+		font-size: rem(16);
+		width: calc((100% - 10px) / 2);
+		@include media-breakpoint-up(md) {
+			font-size: rem(25);
+			width: 320px;
+		}
+		&.active {
+			color: $primary;
+			&::after {
+				background-color:  $primary;
+			}
+		}
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -20px;
+			left: 0;
+			height: 6px;
+			width: 100%;
+			background-color: $gray-400;
+		}
+	}
+
+	.form-wrap {
+		margin: 0 auto;
+		max-width: 650px;
+		&__input-wrap{
+			margin-bottom: rem(32);
+			span {
+				@include media-breakpoint-up(lg) {
+					flex: 0 0 rem(110);
+				}
+			}
+		}
+		textarea {
+			max-width: 320px;
+			height: 106px;
+		}
+		&__descr {
+			margin-bottom: 32px;
+			a {
+				color: $gold;
+				text-decoration: underline;
+			}
+		}
+		&__auth-row {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__btn {
+			width: 100%;
+			@include media-breakpoint-up(md) {
+				width: 30%;
+				&:not(:last-child) {
+					margin-right: rem(20);
+				}
+				&:last-child {
+					margin-left: auto;
+				}
+			}
+			@include media-breakpoint-up(lg) {
+				width: rem(198);
+			}
+		}
+		&__forgot-link {
+			text-align: center;
+			@include media-breakpoint-up(md) {
+				text-align: end;
+			}
+			a {
+				color: $info;
+				text-decoration: underline;
+			}
+		}
+	}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sRegistration
