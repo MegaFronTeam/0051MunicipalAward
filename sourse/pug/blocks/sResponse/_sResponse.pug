@@ -1,0 +1,9 @@
+mixin sResponse(heading)
+	// start sResponse
+	+b.SECTION.sResponse.section#sResponse&attributes(attributes)
+		.container
+			.card
+				+e.heading.P= heading
+				if block
+					block
+	// end sResponse

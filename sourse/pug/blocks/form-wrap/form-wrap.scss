@@ -9,6 +9,9 @@
 	&__input-wrap {
 		// @extend .form-group;
 		// margin-bottom: rem(15);
+		span {
+			order: -1;
+		}
 		&--select {
 			span {
 				@include media-breakpoint-up(lg) {
@@ -22,6 +25,12 @@
 		//  outline: 0 !important;
 		resize: none;
 		flex-grow: 1;
+		&.invalid {
+			border-color: $secondary;
+			& + span {
+				color: $secondary;
+			}
+		}
 	}
 	&__btn {
 		cursor: pointer;

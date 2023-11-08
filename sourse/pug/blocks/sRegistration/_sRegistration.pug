@@ -31,6 +31,7 @@ mixin sRegistration(data)
 							+e.pass-wrap
 								+input('', 'password', 'Пароль')
 								+input('', 'password', 'повтор пароля')
-							+e.btn.btn.btn-gold.BUTTON регистрация
-							+policy
+							+e.btn-wrap
+								+e.btn.btn.btn-gold.BUTTON регистрация
+							+e.descr--policy При нажатии на кнопку «Регистрация» пользователь соглашаетсяс #[a(href="#") условиями правил и обработки персональных данных]
 	// end sRegistration

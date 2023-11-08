@@ -46,7 +46,11 @@
 		margin: 0 auto;
 		max-width: 650px;
 		&__input-wrap{
-			margin-bottom: rem(32);
+			margin-bottom: rem(21);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(32);
+			}
+
 			span {
 				@include media-breakpoint-up(lg) {
 					flex: 0 0 rem(110);
@@ -59,6 +63,15 @@
 		}
 		&__descr {
 			margin-bottom: 32px;
+			&--policy {
+				text-align: center;
+				@include media-breakpoint-up(lg) {
+					text-align: end;
+					a {
+						display: block;
+					}
+				}
+			}
 			a {
 				color: $gold;
 				text-decoration: underline;
@@ -67,14 +80,17 @@
 		&__auth-row {
 			display: flex;
 			flex-wrap: wrap;
+			.form-wrap__btn:not(:last-child) {
+				margin-right: rem(20);
+			}
 		}
 		&__btn {
 			width: 100%;
 			@include media-breakpoint-up(md) {
 				width: 30%;
-				&:not(:last-child) {
-					margin-right: rem(20);
-				}
+				// &:not(:last-child) {
+				// 	margin-right: rem(20);
+				// }
 				&:last-child {
 					margin-left: auto;
 				}
@@ -94,7 +110,23 @@
 			}
 		}
 	}
-
+	.form-wrap__pass-wrap {
+		padding-top: rem(52);
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+		.form-wrap__input-wrap{
+			span {
+				@include media-breakpoint-up(lg) {
+					flex: 0 0 rem(220);
+				}
+			}
+		}
+	}
+	.form-wrap__btn-wrap {
+		text-align: end;
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
