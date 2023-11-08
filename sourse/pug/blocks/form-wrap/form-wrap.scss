@@ -30,6 +30,8 @@
 			& + span {
 				color: $secondary;
 			}
+		&::placeholder {
+			text-align: center;
 		}
 	}
 	&__btn {
@@ -60,18 +62,25 @@
 }
 
 .custom-input {
-	@include roww('49px', '14px', m);
 	display: flex;
-	align-items: center;
 	margin-bottom: 0;
 	min-height: auto;
 	padding-left: 0;
+	@include media-breakpoint-up(lg) {
+		// @include roww('49px', '14px', m);
+		align-items: center;
+	}
 	&__text {
 		color: $primary;
 		font-size: rem(16);
 		font-weight: 700;
 		line-height: normal;
 		text-transform: uppercase;
+		margin-bottom: rem(19);
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(49);
+			margin-bottom: 0;
+		}
 	}
 	&__input {
 		flex: 0 0 auto;
