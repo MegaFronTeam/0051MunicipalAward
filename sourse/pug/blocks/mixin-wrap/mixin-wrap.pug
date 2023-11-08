@@ -38,15 +38,25 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t,...items)
-	+b.page-head
-		- let l = items.length
+mixin page-head(t)
+	+b.page-head.bg-wrap
+		picture.picture-bg
+			source(media="(min-width: 768px)", srcset="img/pageHead-bg.png")
+			img(src="img/pageHead-bg-sm.png", alt="").object-fit-js
 		.container
-			+breadcrumb('Главная',...items)
+			//- +breadcrumb('Главная',...items)
 
-			h1= t
+			h1!= t
 
 mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin auth()
+	+b.auth
+		.tabs 
+			.tabs__caption
+				.tabs__btn.active Авторизация
+				.tabs__btn Регистрация
+			.tabs__content

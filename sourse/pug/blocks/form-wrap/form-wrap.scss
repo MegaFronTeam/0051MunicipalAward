@@ -1,12 +1,27 @@
 .form-wrap {
+	&__row {
+		--bs-gutter-x: #{rem(49)};
+		--bs-gutter-y: #{rem(21)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: #{rem(32)};
+		}
+	}
 	&__input-wrap {
 		// @extend .form-group;
-		margin-bottom: rem(15);
+		// margin-bottom: rem(15);
+		&--select {
+			span {
+				@include media-breakpoint-up(lg) {
+					flex: 0 0 rem(135);
+				}
+			}
+		}
 	}
 	&__input {
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: none;
+		flex-grow: 1;
 	}
 	&__btn {
 		cursor: pointer;
@@ -14,10 +29,45 @@
 	}
 	label {
 		width: 100%;
-		display: block;
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(lg) {
+			align-items: center;
+			flex-direction: row;
+		}
+	}
+	&__input-title {
+		color: $primary;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: normal;
+		text-transform: uppercase;
+		margin-bottom: rem(14);
+		@include media-breakpoint-up(lg) {
+			flex: 0 0 rem(220);
+			margin-bottom: 0;
+		}
 	}
 }
 
+.custom-input {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
+	min-height: auto;
+	padding-left: 0;
+	&__text {
+		color: $primary;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+	&__input {
+		flex: 0 0 auto;
+		margin-left: 0 !important;
+	}
+}
 
 //
 @include media-breakpoint-up(xl) {}
