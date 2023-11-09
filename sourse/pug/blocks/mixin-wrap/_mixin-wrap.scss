@@ -117,11 +117,15 @@
 	--sPB: #{rem(83)};
 	padding-top: calc(rem(75) + var(--sPT));
 	padding-bottom: var(--sPB);
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(100)};
+		min-height: rem(417);
+	}
 	h1 {
 		color: #fff;
 		font-size: rem(30);
 		font-weight: 700;
-		max-width: rem(1140);
+		// max-width: rem(1140);
 		margin-bottom: 0;
 		line-height: 1;
 		@include media-breakpoint-up(md) {

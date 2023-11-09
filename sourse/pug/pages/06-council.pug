@@ -3,15 +3,15 @@ extends ../layout/main.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 
-include ../blocks/sApplication/_sApplication.pug
+include ../blocks/sCouncil/_sCouncil.pug
 
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '02-application.jpg'
+	- let  bg= '06-council.jpg'
 
 block title
-	- let  title= 'Подача заявки'
+	- let  title= 'Наблюдательный совет'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -19,6 +19,6 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+page-head('Подача заявки')
-		+sApplication
+		+page-head('Наблюдательный совет')
+		+sCouncil
 	//- +parts('footer')

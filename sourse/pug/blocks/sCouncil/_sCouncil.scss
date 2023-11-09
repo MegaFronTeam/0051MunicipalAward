@@ -1,0 +1,45 @@
+// start .sCouncil
+.sCouncil {
+	--sPT: #{rem(33)};
+	--sPB: #{rem(33)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(58)};
+		--sPB: #{rem(58)};
+	}
+	&__wrap {
+		padding: rem(33) 0;
+		@include media-breakpoint-up(lg) {
+			padding: rem(58) 0;
+		}
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+		h2 {
+			line-height: 1.25;
+			font-weight: 400;
+			margin-bottom: rem(33);
+			@include media-breakpoint-down(md) {
+				font-size: rem(20);
+			}
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(64);
+			}
+		}
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCouncil
