@@ -1,17 +1,18 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			+e.top
-				+e.item
-					+e.title Организатор
-					+e.logo-wrap(href="#")
-						+img('img/svg/logo-varmsu.svg')
-				+e.item
-					+e.title Контакты
-					+e.mail(href="mailto:support@spremia.ru") support@spremia.ru
-			+e.bottom 
-				+e.item
-					+e.title Премия Служение 2023 ©
-				+e.item
-					+e.title(href="#") Политика конфиденциальности
-					+e.title(href="#") Публичная оферта
+			+e.row
+				.row
+					.col-md
+						span Организатор
+						+e.logo-wrap(href="#")
+							+img('img/svg/logo-varmsu.svg')
+					.col-md-auto
+						span Контакты
+						+e.mail(href="mailto:support@spremia.ru") support@spremia.ru
+			+e.bottom-row.row
+				.col-md.order-last.order-md-first
+					span Премия Служение 2023 ©
+				.col-md-auto
+					+e.link(href="#") Политика конфиденциальности
+					+e.link(href="#") Публичная оферта
