@@ -33,12 +33,16 @@ mixin top-nav()
 									+e.logo(href='/'): +img('img/svg/logo.svg')
 								+e.inner-col.col-md
 									+mnu()
+								+e.inner-col.col-md-auto.d-md-none
+									+e.btn.btn.btn-secondary(href='#') Подать заявку
+									+e.date до 13 декабря
 								+e.inner-col.col-md-auto
 									+e.lk(href='#'): +icon('lk')
 								+e.inner-col--mnu-toggle.col-md-auto
 									+menu-toggle()
-							+e.btn.btn.btn-secondary.d-md-none(href='#') Подать заявку
-				.col-md-auto.order-last.order-md-0: +e.btn.btn.btn-secondary(href='#') Подать заявку
+				.col-md-auto.order-last.order-md-0
+					+e.btn.btn.btn-secondary(href='#') Подать заявку
+					+e.date до 13 декабря
 				.col-auto.d-none.d-md-block: +e.lk(href='#'): +icon('lk')
 				.col-auto.ms-auto
 					+menu-toggle()
