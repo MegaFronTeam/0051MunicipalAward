@@ -8,3 +8,6 @@
 1. <https://megafronteam.github.io/0051MunicipalAward/public/03-registration-response.html>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/04-region.html>
 
+1. 
+1. 
+1. <https://megafronteam.github.io/0051MunicipalAward/public/06-council.html>
