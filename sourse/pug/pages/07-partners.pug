@@ -1,0 +1,24 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sPartners/_sPartners.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '07-partners.jpg'
+
+block title
+	- let  title= 'Партнеры премии'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Партнеры премии')
+		+sPartners
+	//- +parts('footer')

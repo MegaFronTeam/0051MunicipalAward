@@ -75,3 +75,8 @@ mixin upload-field(title)
 					span прикрепить файл
 					+icon('clip')
 			+e.file-name 
+
+mixin partnerItem(img)
+	+b.partner-item
+		if img
+			+img(`img/svg/${img}`).res-i
