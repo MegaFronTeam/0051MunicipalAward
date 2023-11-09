@@ -1,9 +1,12 @@
 // start .sPartners
 .sPartners {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(32)};
+	--sPB: #{rem(32)};
 	// --sTPB: #{rem()};
-	
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(64)};
+		--sPB: #{rem(64)};
+	}
 	&__row{
 		@include roww('8px', '10px', m);
 		display: flex;

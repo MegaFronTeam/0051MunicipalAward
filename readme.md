@@ -9,3 +9,4 @@
 1. <https://megafronteam.github.io/0051MunicipalAward/public/04-region.html>
 1. 
 1. <https://megafronteam.github.io/0051MunicipalAward/public/06-council.html>
+1. <https://megafronteam.github.io/0051MunicipalAward/public/07-partners.html>
