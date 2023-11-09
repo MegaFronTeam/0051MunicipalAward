@@ -2,10 +2,16 @@
 .sPartners {
 	--sPT: #{rem(32)};
 	--sPB: #{rem(32)};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(33)};
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(64)};
 		--sPB: #{rem(64)};
+		--sTPB: #{rem(105)};
+	}
+	.section-title {
+		.h6 {
+			color: $gold;
+		}
 	}
 	&__row{
 		@include roww('8px', '10px', m);
@@ -47,6 +53,14 @@
 		}
 		@include media-breakpoint-up(lg) {
 			--cardCount: 6;
+		}
+	}
+	&--2 {
+		--sPT: #{rem(34)};
+		--sPB: #{rem(34)};
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(103)};
+			--sPB: #{rem(105)};
 		}
 	}
 	@include media-breakpoint-up(xl) {}
