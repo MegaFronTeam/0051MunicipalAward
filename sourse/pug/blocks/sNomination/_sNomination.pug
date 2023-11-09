@@ -1,0 +1,34 @@
+mixin sNomination(data)
+	// start sNomination
+	+b.SECTION.sNomination.section#sNomination&attributes(attributes)
+		.container
+			+e.header-row
+				+b.section-title
+					h2 Мой край&nbsp;&mdash; моя гордость
+				+e.text
+					p За&nbsp;проекты, направленные на&nbsp;популяризацию муниципального образования, создание уникального образа территории
+					+e.btn.btn.btn-secondary Подать заявку
+				+e.next-link(href="#")
+					+e.text-link.d-block.d-lg-none Следующая номинация
+					+icon('next-arrow')
+			+e.item
+				+e.item-title критерии номинации
+				+e.item-link(href="#" download)
+					+iconC('nominates-1')
+					| Скачать файл
+					+icon('down-arrow')
+			+e.item
+				+e.item-title инструкция к подачи заявки
+				+e.item-link--instr(href="#" download)
+					+iconC('nominates-2')
+					| Скачать файл
+					+icon('down-arrow')
+			+e.item
+				+e.item-title--partners Партнеры номинациИ
+				+e.item-links
+					+partnerItem
+					+partnerItem('sPartners-logo-1.svg')
+					+partnerItem('sPartners-logo-2.svg').d-lg-none.d-xl-flex
+					+partnerItem.d-lg-none
+			+rating('Шорт-лист (Топ-10) в регионе')
+	// end sNomination

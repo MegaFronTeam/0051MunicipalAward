@@ -1,25 +1,29 @@
 .footer {
-		
+	padding-block: rem(31) rem(40);
+	background-color: $dark;
+	color: $white;
 	margin-top: auto;
-// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
+	@include media-breakpoint-up(md) {
+		padding-block: rem(70);
 	}
-	.section-title{
-		
+	&__top,
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
 	}
-	&__col{
-
+	&__bottom {
+		padding-top: 18px;
+		border-top: 1ps solid $white;
+		@include media-breakpoint-up(md) {
+			padding-top: 54px;
+		}
 	}
 	&__item{
-
+		display: flex;
 	}
-	&__slide{
-		height: auto;
+	&__title {
+		margin-right: 45px;
+		font-size: rem(12);
 	}
 // 
 @include media-breakpoint-up(xl) {}

@@ -3,7 +3,7 @@ extends ../layout/main.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 
-include ../blocks/sRegion/_sRegion.pug
+include ../blocks/sNomination/_sNomination.pug
 
 
 block variables
@@ -11,7 +11,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'Статистика оп региону'
+	- let  title= 'Номинации'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -19,6 +19,6 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+page-head('Статистика по региону')
-		+sRegion
-	//- +parts('footer')
+		+page-head('Номинации')
+		+sNomination
+	+parts('footer')

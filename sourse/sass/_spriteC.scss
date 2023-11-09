@@ -7,6 +7,16 @@
 	fill: currentColor;
 }
 
+.iconC-nominates-1 {
+	$h: 137;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(128 / #{$h} *1em );
+}
+.iconC-nominates-2 {
+	$h: 125;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(139 / #{$h} *1em );
+}
 .iconC-telegram {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

@@ -99,16 +99,7 @@
 			filter: drop-shadow(0 0 13px #D2A35F);
 		}
 	}
-	&__shortlist {
-		padding-top: rem(24);
-		min-height: rem(330);
-		border-top: 1px solid $gold;
-		@include media-breakpoint-up(sm) {
-			padding-top: rem(48);
-			min-height: rem(464);
-		}
-	}
-
+	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

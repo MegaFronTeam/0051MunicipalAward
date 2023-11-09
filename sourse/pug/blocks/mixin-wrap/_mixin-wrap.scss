@@ -252,3 +252,13 @@
 	padding: rem(10);
 	width: calc(100% / var(--cardCount) - var(--bs-gutter-x));
 }
+
+.shortlist {
+	padding-top: rem(24);
+	min-height: rem(330);
+	border-top: 1px solid $gold;
+	@include media-breakpoint-up(sm) {
+		padding-top: rem(48);
+		min-height: rem(464);
+	}
+}

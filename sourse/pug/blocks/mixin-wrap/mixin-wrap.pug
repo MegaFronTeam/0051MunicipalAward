@@ -77,6 +77,11 @@ mixin upload-field(title)
 			+e.file-name 
 
 mixin partnerItem(img)
-	+b.partner-item
+	+b.partner-item&attributes(attributes)
 		if img
 			+img(`img/svg/${img}`).res-i
+
+mixin rating(title)
+				+b.shortlist
+					+b.section-title
+						h2= title
