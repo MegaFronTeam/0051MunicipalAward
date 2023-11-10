@@ -35,6 +35,7 @@
 	&__return-link {
 		color: $body-color;
 		grid-column: 4 / 5;
+		align-self: flex-start;
 		@include mt;
 		&:hover {
 			text-decoration: underline;
@@ -170,6 +171,7 @@
 	&__project-menu {
 		position: relative;
 		width: 19px;
+		height: 27px;
 		top: 7px;
 		margin-left: 13px;
 		span {

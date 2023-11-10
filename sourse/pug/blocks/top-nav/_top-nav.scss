@@ -92,7 +92,6 @@
 		text-transform: uppercase;
 		text-align: center;
 		margin-top: rem(11);
-		margin-bottom: rem(35);
 		@include media-breakpoint-up(md) {
 			margin-bottom: calc(rem(-11) - rem(18));
 		}
