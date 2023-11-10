@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Новости</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page" data-bg="08-steps.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head bg-wrap">
+					<picture class="picture-bg">
+						<source media="(min-width: 768px)" srcset="img/pageHead-bg.png"/><img class="object-fit-js" src="img/pageHead-bg-sm.png" alt=""/>
+					</picture>
+					<div class="container">
+						<h1>Новости</h1>
+					</div>
+				</div>
+				<!-- start sContent-->
+				<section class="sContent section" id="sContent">
+					<div class="container">
+						<div class="sContent__news-item">
+							<div class="sContent__news-info">
+								<div class="sContent__news-date">1 ноября
+								</div>
+								<div class="sContent__news-preview">Lorem ipsum dolor sit amet consectetur. Senectus varius tortor non et. Ipsum in vitae neque aliquet nunc viverra mauris velit ornare.
+								</div>
+							</div>
+							<div class="sContent__img-wrap">
+								<picture>
+									<source srcset="img/news-sm.jpg" media="(max-width: 768px)"/><img src="img/news-lg.jpg"/>
+								</picture>
+							</div>
+							<div class="sContent__descr">
+								<p>Lorem ipsum dolor sit amet consectetur. Blandit arcu fames suspendisse volutpat interdum rhoncus non. Est in maecenas ipsum et congue cursus. Suspendisse in sagittis sed amet congue tempor. Morbi id in mauris amet dapibus eu ac. Lacus vitae sit dictum duis. Ornare adipiscing commodo ultrices id. Pellentesque sed nunc quam bibendum. Tincidunt massa et in proin est fusce congue. Amet arcu gravida aliquam tellus mattis. Id cursus in ut nisl. Sagittis erat pellentesque turpis vulputate tortor. Ut diam id nunc diam sed id vel pretium id.</p>
+								<p>Accumsan sed condimentum purus quis viverra convallis nulla mus. Facilisi tortor ullamcorper lacus consectetur orci dolor. Tellus tortor amet lobortis in non commodo mi tellus aliquet. Feugiat feugiat et id suscipit sodales mollis habitasse arcu. Sit consectetur nunc euismod felis orci id. Consequat commodo cursus lectus aliquam scelerisque facilisi massa.</p>
+								<p>Accumsan sed turpis viverra tellus. Arcu maecenas non viverra eget mattis ipsum aliquam libero amet. Erat proin aliquet malesuada diam nullam. Facilisis consequat feugiat id in. Nisl in nisl nulla faucibus elit. A scelerisque nulla ultrices vitae donec et. Blandit nibh magnis tellus et ultricies aliquam.</p>
+								<p>Id molestie ullamcorper mattis pulvinar vitae eleifend gravida sagittis. Ornare nunc ut sit diam sodales vel dictum adipiscing. Odio vitae at fames arcu in. Tortor pharetra lectus ornare et mattis fermentum purus lorem. Turpis vitae nunc auctor commodo.</p>
+							</div>
+						</div>
+						<div class="sContent__bottom">
+							<a class="sContent__bottom-link" href="#">Все новости
+							</a>
+							<a class="sContent__bottom-link sContent__bottom-link--right" href="#">Следующая новость
+							</a>
+						</div>
+					</div>
+				</section>
+				<!-- end sContent-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

@@ -2,8 +2,20 @@ mixin sContent()
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContent
-				
-			+e.row.row
+			+e.news-item
+				+e.news-info
+					+e.news-date 1 ноября
+					+e.news-preview Lorem ipsum dolor sit amet consectetur. Senectus varius tortor non et. Ipsum in vitae neque aliquet nunc viverra mauris velit ornare.
+				+e.img-wrap
+					picture
+						source(srcset="img/news-sm.jpg" media="(max-width: 768px)")
+						img(src="img/news-lg.jpg")
+				+e.descr
+					p Lorem ipsum dolor sit amet consectetur. Blandit arcu fames suspendisse volutpat interdum rhoncus non. Est in maecenas ipsum et congue cursus. Suspendisse in sagittis sed amet congue tempor. Morbi id in mauris amet dapibus eu ac. Lacus vitae sit dictum duis. Ornare adipiscing commodo ultrices id. Pellentesque sed nunc quam bibendum. Tincidunt massa et in proin est fusce congue. Amet arcu gravida aliquam tellus mattis. Id cursus in ut nisl. Sagittis erat pellentesque turpis vulputate tortor. Ut diam id nunc diam sed id vel pretium id.
+					p Accumsan sed condimentum purus quis viverra convallis nulla mus. Facilisi tortor ullamcorper lacus consectetur orci dolor. Tellus tortor amet lobortis in non commodo mi tellus aliquet. Feugiat feugiat et id suscipit sodales mollis habitasse arcu. Sit consectetur nunc euismod felis orci id. Consequat commodo cursus lectus aliquam scelerisque facilisi massa.
+					p Accumsan sed turpis viverra tellus. Arcu maecenas non viverra eget mattis ipsum aliquam libero amet. Erat proin aliquet malesuada diam nullam. Facilisis consequat feugiat id in. Nisl in nisl nulla faucibus elit. A scelerisque nulla ultrices vitae donec et. Blandit nibh magnis tellus et ultricies aliquam.
+					p Id molestie ullamcorper mattis pulvinar vitae eleifend gravida sagittis. Ornare nunc ut sit diam sodales vel dictum adipiscing. Odio vitae at fames arcu in. Tortor pharetra lectus ornare et mattis fermentum purus lorem. Turpis vitae nunc auctor commodo.
+			+e.bottom
+				+e.bottom-link(href="#") Все новости
+				+e.bottom-link--right(href="#") Следующая новость
 	// end sContent
