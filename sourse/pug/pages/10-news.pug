@@ -1,0 +1,24 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sNews/_sNews.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '10-news.jpg'
+
+block title
+	- let  title= 'Новости'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Новости')
+		+sNews2
+	+parts('footer')

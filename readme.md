@@ -12,3 +12,4 @@
 1. <https://megafronteam.github.io/0051MunicipalAward/public/07-partners.html>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/08-steps.html>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/09-account.html>
+1. <https://megafronteam.github.io/0051MunicipalAward/public/10-news.html>

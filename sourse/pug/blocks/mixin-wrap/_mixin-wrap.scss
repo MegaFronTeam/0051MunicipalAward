@@ -346,3 +346,54 @@
 		}
 	}
 }
+
+.pagination-wrapper {
+	.icon {
+		font-size: rem(16);
+		width: 1em;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: rem(10);
+	}
+	ul {
+		--bs-pagination-padding-x: #{rem(6)};
+		--bs-pagination-padding-y: 0;
+		--bs-pagination-font-size: #{rem(16)};
+		--bs-pagination-color: #{$body-color};
+		--bs-pagination-bg: var(--bs-body-bg);
+		// --bs-pagination-border-width: 0;
+		// --bs-pagination-border-color: var(--bs-border-color);
+		// --bs-pagination-border-radius: var(--bs-border-radius);
+	
+		--bs-pagination-hover-color: var(--bs-link-hover-color);
+		--bs-pagination-hover-bg: transparent;
+		// --bs-pagination-hover-border-color: var(--bs-border-color);
+	
+		--bs-pagination-focus-color: var(--bs-link-hover-color);
+		--bs-pagination-focus-bg: transparent;
+		
+		--bs-pagination-active-color: #153c88;
+		--bs-pagination-active-bg: transparent;
+		// --bs-pagination-active-border-color: #153c88;
+	
+		--bs-pagination-disabled-color: var(--bs-secondary-color);
+		--bs-pagination-disabled-bg: var(--bs-secondary-bg);
+		--bs-pagination-disabled-border-color: var(--bs-border-color);
+
+		align-items: center;
+		margin-bottom: 0;
+		@include roww('6px', 0, m);
+		li {
+			.page-numbers {
+				border: none;
+				&.active {
+					font-weight: 700;
+				}
+				&.prev, &.next {
+					display: flex;
+					color: $primary;
+				}
+			}
+		}
+	}
+}
