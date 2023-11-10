@@ -383,6 +383,10 @@
 		align-items: center;
 		margin-bottom: 0;
 		@include roww('6px', 0, m);
+		justify-content: center;
+		@include media-breakpoint-up(md) {
+			justify-content: flex-start;
+		}
 		li {
 			.page-numbers {
 				border: none;
