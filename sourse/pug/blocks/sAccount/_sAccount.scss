@@ -1,0 +1,217 @@
+// start .sAccount
+.sAccount {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__top {
+		display: grid;
+		grid-template-columns: 200px 1fr 1fr auto;
+		margin-bottom: 40px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 69px;
+		}
+		@include media-breakpoint-up(lg) {
+			grid-template-columns: 220px 1fr 1fr auto;
+		}
+	}
+	&__photo {
+		grid-column: 1 / 4;
+		@include media-breakpoint-up(md)  {
+			grid-row: 1 / 2;
+			grid-column: span 1;
+		}
+		@include media-breakpoint-up(lg) {
+			grid-row: 1 / 3;
+		}
+	}
+	.upload-avatar__input-wrap {
+		display: block;
+		position: relative;
+		width: 162px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+	}
+	&__return-link {
+		color: $body-color;
+		grid-column: 4 / 5;
+		@include mt;
+		&:hover {
+			text-decoration: underline;
+		}
+		@include media-breakpoint-down(md) {
+			align-self: end;
+		}
+	}
+	&__person {
+		margin-bottom: 33px;
+		font-size: rem(20);
+		grid-column: 1 / 5;
+		grid-row: 1 / 2;
+		@include media-breakpoint-up(md) {
+			grid-column: 2 / 4;
+			font-size: rem(28);
+		}
+		@include media-breakpoint-up(lg) {
+			grid-column: 2 / 4;
+			margin-bottom: 0;
+			font-size: rem(40);
+		}
+		.icon {
+			margin-inline: 8px;
+			font-size:12px;
+			fill: none;
+			stroke: $info;
+			@include media-breakpoint-up(md) {
+				margin-inline: 16px;
+				font-size: 23px;
+			}
+		}
+	}
+	&__email,
+	&__tel {
+		grid-column:  1 / 5;
+		@include media-breakpoint-up(md) {
+			grid-column:  2 / 5;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+			align-self: end;
+			grid-row: 2 / 3;
+		}
+	}
+	&__email {
+		padding-top: 38px;
+		@include media-breakpoint-up(md) {
+			padding-top: 0;
+		}
+		@include media-breakpoint-up(lg){
+			grid-column: 2 / 3;
+		}
+	}
+	&__tel {
+		@include media-breakpoint-up(lg) {
+			grid-column: 3 / 4;
+		}
+	}
+	.form-wrap__input-wrap {
+		margin-bottom: 27px;
+		margin-right: 0;
+		@include media-breakpoint-up(md) {
+			margin-right: 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+	}
+	.form-wrap__input-title {
+		flex-basis: auto;
+		margin-right: rem(20);
+		color: $body-color;
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(56);
+		}
+	}
+	.form-wrap__input {
+		max-width: 320px;
+		border-color: $info;
+		text-align: center;
+		@include media-breakpoint-down(md) {
+			max-width: none;
+		}
+	}
+	.shortlist h2 {
+		@include media-breakpoint-down(sm) {
+			font-size: rem(20);
+		}
+	}
+
+	&__project-row{
+		--bs-gutter-x: #{rem(10)};
+		--bs-gutter-y: #{rem(10)};
+	}
+	&__col {
+		display: none;
+		&:nth-child(-n+2) {
+			display: block;
+		}
+		@include media-breakpoint-up(sm) {
+			&:nth-child(-n+4) {
+				display: block;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			&:nth-child(-n+6) {
+				display: block;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			display: block;
+		}
+	}
+	&__project-item{
+		display: flex;
+		flex-wrap: wrap;
+		padding: rem(16) rem(29);
+		height: 100%;
+		min-height: 227px;
+		border: 1px solid $body-color;
+		@include media-breakpoint-up(md) {
+			padding: rem(20);
+		}
+	}
+	&__project-name {
+		width: calc(100% - 32px);
+		margin-bottom: 20px;
+		@include media-breakpoint-up(md) {
+			width: calc(100% - 40px);
+		}
+	}
+	&__project-menu {
+		position: relative;
+		width: 19px;
+		top: 7px;
+		margin-left: 13px;
+		span {
+			display: block;
+			height: 1px;
+			width: 100%;
+			background-color: $body-color;
+		}
+		@include media-breakpoint-up(md) {
+			width: 27px;
+		}
+		&::after,
+		&::before {
+			position: absolute;
+			content: '';
+			height: 1px;
+			width: 19px;
+			background-color: $body-color;
+			left: 0;
+			top: 8px;
+			@include media-breakpoint-up(md) {
+				top: 9px;
+				width: 27px;
+			}
+		}
+		&::before {
+			top: 17px;
+			@include media-breakpoint-up(md) {
+				top: 19px;
+			}
+		}
+	}
+	&__project-btn {
+		margin-top: auto;
+		width: 100%;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAccount
+

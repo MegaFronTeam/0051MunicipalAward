@@ -132,8 +132,24 @@ function eventHandler() {
 			}
 		}
 	}
-	inputFile();	
+	inputFile();
+	
+	let uploadavatar = document.querySelector('.upload-avatar');
+	if (uploadavatar){
+		let inputFile = uploadavatar.querySelector('.input-upload');
+		let img = uploadavatar.querySelector('.img-wrap-center img');
+		inputFile.addEventListener('change', () => {
+			var reader = new FileReader();
+			reader.onload = function(){ img.src = reader.result;}
+			reader.readAsDataURL(event.target.files[0]);
 
+			inputFile.files[0].name.length > 0 ? uploadavatar.classList.add('active') : uploadavatar.classList.remove('active');
+		});
+		uploadavatar.querySelector('.upload-avatar__delete-photo').addEventListener('click', () => {
+			img.src = '';
+			uploadavatar.classList.remove('active');
+		})
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

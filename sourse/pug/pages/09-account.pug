@@ -1,0 +1,24 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sAccount/_sAccount.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '08-steps.jpg'
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Личный кабинет')
+		+sAccount
+	+parts('footer')

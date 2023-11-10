@@ -262,3 +262,87 @@
 		min-height: rem(464);
 	}
 }
+
+.upload-avatar {
+	position: relative;
+	margin-right: rem(58);
+	&__input-wrap {	
+		display: block;	
+		border-radius: 50%;
+		width: 162px;
+		height: 162px;
+		cursor: pointer;
+		.img-wrap-center {
+			img {
+				display: none;
+				border-radius: 50%;
+			}
+		}
+	}
+	&__file-name {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    bottom: 0;
+    right: 10px;
+    width: 43px;
+		height: 43px;
+		background-color: $gray-300;
+		border-radius: 50%;
+		font-size: 23px;
+		color: $white;
+	}
+	&__delete-photo {
+		position: absolute;
+		top: 101%;
+		left: 50%;
+		width: 100%;
+		transform: translateX(-50%);
+		display: none;
+		cursor: pointer;
+		@include mt;
+		color: $danger;
+		font-size: 14px;
+		@include media-breakpoint-up(md) {
+			text-align: center;
+		}
+		&:hover {
+			color: $secondary;
+		}
+	}
+	&__stub {
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+		img {
+			width: 100%;
+		}
+		// span {
+		// 	font-size: rem(24);
+		// 	line-height: 1.2;
+		// 	text-transform: uppercase;
+		// 	color: #fff;
+		// 	@include media-breakpoint-up(md) {
+		// 		@include rfs(40px);
+		// 	}
+		// }
+	}
+	&.active {
+		.upload-avatar__input-wrap {
+			pointer-events: none;
+			.img-wrap-center {
+				img {
+					display: block;
+				}
+			}
+		}
+		.upload-avatar__file-name {
+			display: none;
+		}
+		.upload-avatar__delete-photo {
+			display: block;
+		}
+	}
+}

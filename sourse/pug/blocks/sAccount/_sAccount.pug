@@ -1,0 +1,33 @@
+mixin sAccount(data)
+	// start sAccount
+	+b.SECTION.sAccount.section#sAccount&attributes(attributes)
+		.container
+			+b.form-wrap.sAccount__top
+				.sAccount__photo
+					+uploadAvatar()
+				.sAccount__person Александр Семенович 
+					a(href="#")
+						+icon('pencil')
+				a.sAccount__return-link(href="#") Выйти
+				.sAccount__email
+					+input('', 'email', 'e-mail')(value="email@email.ru")
+				.sAccount__tel
+					+input('', 'tel', 'Телефон')(value="+7 (000) 000 00 00")
+			+rating('Мой край — моя гордость')
+				.sAccount__project-row.row
+					mixin projectItem(name)
+						.sAccount__col.col-sm-6.col-md-4.col-lg-3
+							.sAccount__project-item
+								.sAccount__project-name= name
+								a.sAccount__project-menu(href="#")
+									span
+								a.sAccount__project-btn.btn.btn-gold(href="#") Голосовать
+					+projectItem('Название проекта 1 может быть разного размера')
+					+projectItem('Название проекта 2')
+					+projectItem('Название проекта 3')
+					+projectItem('Название проекта 4')
+					+projectItem('Название проекта 1')
+					+projectItem('Название проекта 2')
+					+projectItem('Название проекта 3')
+					+projectItem('Название проекта 4')
+	// end sAccount

@@ -85,3 +85,16 @@ mixin rating(title)
 				+b.shortlist
 					+b.section-title
 						h2= title
+					if block
+						block
+
+mixin uploadAvatar(initials)
+	+b.upload-avatar
+		+e.LABEL.input-wrap
+			input.input-upload(type='file' name='file')
+			+e.stub
+				+img('img/flag.jpg')
+			.img-wrap-center
+				+img('', 'bg')
+			+e.file-name +
+		+e.delete-photo Удалить фото
