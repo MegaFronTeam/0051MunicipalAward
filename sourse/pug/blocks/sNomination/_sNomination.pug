@@ -11,24 +11,36 @@ mixin sNomination(data)
 				+e.next-link(href="#")
 					+e.text-link.d-block.d-lg-none Следующая номинация
 					+icon('next-arrow')
-			+e.item
-				+e.item-title критерии номинации
+			mixin item(title)
+				+e.item
+					.row
+						.col
+							+e.item-title!= title 
+						+e.col.col-lg-7
+							block
+			+item('критерии номинации')
 				+e.item-link(href="#" download)
 					+iconC('nominates-1')
 					| Скачать файл
 					+icon('down-arrow')
-			+e.item
-				+e.item-title инструкция к подачи заявки
+			+item(`инструкция к&nbsp;подачи заявки`)
 				+e.item-link--instr(href="#" download)
 					+iconC('nominates-2')
 					| Скачать файл
 					+icon('down-arrow')
-			+e.item
-				+e.item-title--partners Партнеры номинациИ
-				+e.item-links
-					+partnerItem
-					+partnerItem('sPartners-logo-1.svg')
-					+partnerItem('sPartners-logo-2.svg').d-lg-none.d-xl-flex
-					+partnerItem.d-lg-none
+			+item('Партнеры номинациИ')
+				+e.item-links.row
+					.col-6.col-md-4
+						+partnerItem
+					.col-6.col-md-4
+						+partnerItem('sPartners-logo-1.svg')
+					.col-6.col-md-4
+						+partnerItem('sPartners-logo-2.svg')
+					.col-6.col-md-4
+						+partnerItem
+			//- +e.item
+			//- 	+e.item-title инструкция к подачи заявки
+			//- +e.item
+			//- 	+e.item-title--partners 
 			+rating('Шорт-лист (Топ-10) в регионе')
 	// end sNomination
