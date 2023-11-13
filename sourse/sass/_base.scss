@@ -110,6 +110,13 @@ body {
 }
 main{
 	flex-grow: 1;
+	padding-top: calc(rem(250.91) - rem(75));
+	@include media-breakpoint-up(md) {
+		padding-top: calc(rem(141) - rem(75));
+	}
+	@include media-breakpoint-up(lg) {
+		padding-top: calc(rem(178) - rem(75));
+	}
 }
 // .main-wrapper__inner{
 // 	// overflow-x: hidden;

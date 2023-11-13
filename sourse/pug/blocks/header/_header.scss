@@ -1,8 +1,55 @@
 
 // start .header
 .header {
-	position: relative;
+	position: fixed;
 	z-index: 1001;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	@include mt;
+	&--js{
+			
+		&.fixed-animate{
+			transition: transform .4s;
+			position: fixed;
+		}
+		&.fixed{
+			transform: translateY(-200%);
+			.top-nav {
+				background-color: #fff;
+				&__logo {
+					width: rem(85.984);
+				}
+			}
+		}
+		&.fixed-show{
+			transform: translateY(0);
+			.topLine {
+				@include media-breakpoint-up(md) {
+					display: none;
+				}
+			}
+			.top-nav {
+				box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.17);
+				padding-top: rem(8);
+				padding-bottom: rem(23);
+				// &__logo {
+				// 	width: rem(85.984);
+				// }
+				&__btn-col {
+					@include media-breakpoint-down(md) {
+						display: none;
+					}
+				}
+			}
+			// .catalog-menu {
+			// 	@include media-breakpoint-up(md) {
+			// 		height: calc(100vh - 70px);
+			// 	}
+			// }
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
