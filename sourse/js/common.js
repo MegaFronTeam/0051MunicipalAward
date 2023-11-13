@@ -62,31 +62,28 @@ function eventHandler() {
 
 	// });
 
-	let defSliders = document.querySelectorAll('.def-slider-js');
-	if (defSliders.length > 0) {
-		defSliders.forEach((defSlider) => {
-			// new Swiper(defSlider, {
-			// 	slidesPerView: 'auto',
-			// 	loop: true,
-			// 	loopAdditionalSlides: 2,
-			// 	navigation: {
-			// 		nextEl: defSlider.querySelector('.swiper-button-next'),
-			// 		prevEl: defSlider.querySelector('.swiper-button-prev'),
-			// 	},
-			// 	pagination: {
-			// 		el: defSlider.querySelector('.swiper-pagination'),
-			// 		type: 'bullets',
-			// 		clickable: true,
-			// 	},
-			// });
-			new Splide(defSlider, {
-				autoWidth: true,
-				focus    : 0,
-				omitEnd  : true,
-				type     : 'loop',
-				focus    : defSlider.dataset.centered ? 'center' : '',
-			}).mount();
-		});
+	if(document.querySelector('.sAwardStages__swiper')) {
+		new Splide('.sAwardStages__swiper', {
+			autoWidth: true,
+			focus    : 0,
+			omitEnd  : true,
+			pagination: false
+		}).mount();
+	}
+
+	if(document.querySelector('.sSupervisory__swiper')) {
+		let sSupervisorySlider = new Splide('.sSupervisory__swiper', {
+			autoWidth: true,
+			focus    : 0,
+			omitEnd  : true,
+			type     : 'loop',
+		}).mount();
+	
+		let slidesArr = sSupervisorySlider.Components.Elements.slides;
+		sSupervisorySlider.on('move', function (newIndex, prevIndex) {
+			slidesArr[newIndex].classList.add('active-slide-animated');
+			slidesArr[prevIndex].classList.remove('active-slide-animated');
+		} );
 	}
 
 	let sApplicationsCards = document.querySelectorAll('.sApplications__item');

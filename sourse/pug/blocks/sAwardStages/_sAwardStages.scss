@@ -131,7 +131,7 @@
 			--slideCount: 1;
 			--sliderGutter: 0px;
 			overflow: visible;
-			margin-right: calc(var(--sliderGutter)*-1) !important;
+			margin-right: calc(var(--sliderGutter) * -1) !important;
 			@include media-breakpoint-up(sm) {
 				--slideCount: 2;
 				--sliderGutter: #{rem(10)};

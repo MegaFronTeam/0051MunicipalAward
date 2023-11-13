@@ -8,7 +8,7 @@ mixin sSupervisory(data)
 			+b.section-title
 				.h6 Наблюдательный совет
 			mixin slide(img)
-				li.sSupervisory__slide.splide__slide
+				li.sSupervisory__slide.splide__slide&attributes(attributes)
 					+e.item
 						+e.img-wrap
 							+img(`img/${img}`, 'bg')
@@ -19,7 +19,7 @@ mixin sSupervisory(data)
 			+e.swiper.splide.def-slider-js(data-centered=true)
 				.splide__track
 					ul.splide__list
-						+slide('sSupervisory-person-1.jpg')
+						+slide('sSupervisory-person-1.jpg').active-slide-animated
 						+slide('sSupervisory-person-2.jpg')
 						+slide('sSupervisory-person-1.jpg')
 						+slide('sSupervisory-person-2.jpg')
