@@ -8,7 +8,7 @@ mixin sSupervisory(data)
 			+b.section-title
 				.h6 Наблюдательный совет
 			mixin slide(img)
-				+e.slide.swiper-slide
+				li.sSupervisory__slide.splide__slide
 					+e.item
 						+e.img-wrap
 							+img(`img/${img}`, 'bg')
@@ -16,20 +16,21 @@ mixin sSupervisory(data)
 						p Первый заместитель Руководителя
 						p Администрации президента
 						p Российской Федерации 
-			+e.swiper(data-centered=true).swiper.def-slider-js
-				.swiper-wrapper
-					+slide('sSupervisory-person-1.jpg')
-					+slide('sSupervisory-person-2.jpg')
-					+slide('sSupervisory-person-1.jpg')
-					+slide('sSupervisory-person-2.jpg')
-					+slide('sSupervisory-person-1.jpg')
-					+slide('sSupervisory-person-2.jpg')
-					+slide('sSupervisory-person-1.jpg')
-					+slide('sSupervisory-person-2.jpg')
-					+slide('sSupervisory-person-1.jpg')
-					+slide('sSupervisory-person-2.jpg')
-					+slide('sSupervisory-person-1.jpg')
-					+slide('sSupervisory-person-2.jpg')
+			+e.swiper.splide.def-slider-js(data-centered=true)
+				.splide__track
+					ul.splide__list
+						+slide('sSupervisory-person-1.jpg')
+						+slide('sSupervisory-person-2.jpg')
+						+slide('sSupervisory-person-1.jpg')
+						+slide('sSupervisory-person-2.jpg')
+						+slide('sSupervisory-person-1.jpg')
+						+slide('sSupervisory-person-2.jpg')
+						+slide('sSupervisory-person-1.jpg')
+						+slide('sSupervisory-person-2.jpg')
+						+slide('sSupervisory-person-1.jpg')
+						+slide('sSupervisory-person-2.jpg')
+						+slide('sSupervisory-person-1.jpg')
+						+slide('sSupervisory-person-2.jpg')
 				+arrow
 				.swiper-pagination
 	// end sSupervisory
