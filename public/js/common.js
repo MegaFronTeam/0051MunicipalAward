@@ -23,64 +23,67 @@ function eventHandler() {
 	whenResize();
 
 
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
+	// let defaultSl = {
+	// 	spaceBetween: 0,
+	// 	lazy: {
+	// 		loadPrevNext: true,
+	// 	},
+	// 	watchOverflow: true,
+	// 	loop: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: ' .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: true,
+	// 		// renderBullet: function (index, className) {
+	// 		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+	// 		// }
+	// 	},
+	// }
+
+	// new Swiper('.breadcrumb-slider--js', {
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	watchOverflow: true
+	// });
+
+	// const swiper4 = new Swiper('.sBanners__slider--js', { // если не используешь методы swiper  - можно обращаться без нее к Swiper
+	// 	// slidesPerView: 5,
+	// 	...defaultSl,
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
+
+	// });
+
+	if(document.querySelector('.sAwardStages__swiper')) {
+		new Splide('.sAwardStages__swiper', {
+			autoWidth: true,
+			focus    : 0,
+			omitEnd  : true,
+			pagination: false
+		}).mount();
 	}
 
-	new Swiper('.breadcrumb-slider--js', {
-		slidesPerView: 'auto',
-		freeMode: true,
-		watchOverflow: true
-	});
-
-	const swiper4 = new Swiper('.sBanners__slider--js', { // если не используешь методы swiper  - можно обращаться без нее к Swiper
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
-	});
-
-	let defSliders = document.querySelectorAll('.def-slider-js');
-	if (defSliders.length > 0) {
-		defSliders.forEach((defSlider) => {
-			new Swiper(defSlider, {
-				slidesPerView: 'auto',
-				loop: true,
-				loopAdditionalSlides: 1,
-				centeredSlides: defSlider.dataset.centered ? true : false,
-				navigation: {
-					nextEl: defSlider.querySelector('.swiper-button-next'),
-					prevEl: defSlider.querySelector('.swiper-button-prev'),
-				},
-				pagination: {
-					el: defSlider.querySelector('.swiper-pagination'),
-					type: 'bullets',
-					clickable: true,
-				},
-			});
-		});
+	if(document.querySelector('.sSupervisory__swiper')) {
+		let sSupervisorySlider = new Splide('.sSupervisory__swiper', {
+			autoWidth: true,
+			focus    : 0,
+			omitEnd  : true,
+			type     : 'loop',
+		}).mount();
+	
+		let slidesArr = sSupervisorySlider.Components.Elements.slides;
+		sSupervisorySlider.on('move', function (newIndex, prevIndex) {
+			slidesArr[newIndex].classList.add('active-slide-animated');
+			slidesArr[prevIndex].classList.remove('active-slide-animated');
+		} );
 	}
 
 	let sApplicationsCards = document.querySelectorAll('.sApplications__item');

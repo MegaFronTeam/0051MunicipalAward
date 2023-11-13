@@ -23,6 +23,7 @@
 		padding-bottom: rem(42);
 		border-bottom: 1px solid $primary;
 		display: block;
+		height: 100%;
 		&:hover {
 			img {
 				transform: scale(1.1);

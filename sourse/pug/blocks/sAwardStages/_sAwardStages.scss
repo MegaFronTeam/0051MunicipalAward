@@ -9,53 +9,42 @@
 		--sTPB: #{rem(46)};
 	}
 	&__swiper {
-		--slideCount: 1;
-    --sliderGutter: 0px;
 		overflow: visible;
-		margin-right: calc(var(--sliderGutter)*-1);
 		@include media-breakpoint-up(sm) {
-			--slideCount: 2;
-			--sliderGutter: #{rem(10)};
 			margin-bottom: rem(10);
-		}
-		@include media-breakpoint-up(md) {
-			--slideCount: 3;
-		}
-		@include media-breakpoint-up(lg) {
-			--slideCount: 4;
 		}
 		@include media-breakpoint-down(sm) {
 			margin-left: calc(var(--bs-gutter-x) / -2);
 			margin-right: calc(var(--bs-gutter-x) / -2);
 		}
-
-		.swiper-button-hand {
+		.splide__arrow {
 			background-color: transparent;
 			border: none;
 			width: rem(42);
 			height: rem(42);
 			box-shadow: none;
-
-			--swiperArrowPosition: #{rem(20)};
-			--swiperColorDef: #fff;
-
+			&:hover {
+				.icon {
+					color: $primary;
+				}
+			}
 			@include media-breakpoint-up(lg) {
-				--swiperArrowPosition: #{rem(40)};
 				width: rem(100);
 				height: rem(100);
 			}
 			@include media-breakpoint-up(xl) {
 				width: rem(154);
 				height: rem(154);
-				--swiperArrowPosition: #{rem(80)};
 			}
 			.icon {
+				@include mt;
 				height: 1em;
 				width: 1em;
 				fill: none;
 				stroke: currentColor;
 				stroke-width: 3px;
 				font-size: rem(28);
+				color: #fff;
 				@include media-breakpoint-up(lg) {
 					font-size: rem(100);
 				}
@@ -63,11 +52,17 @@
 					font-size: rem(154);
 				}
 			}
+			&:disabled {
+				pointer-events: none;
+			}
+			&--prev {
+				transform: translateY(-50%) rotate(180deg);
+			}
 		}
 	}
 	&__slide {
 		margin-right: calc(var(--sliderGutter));
-    width: calc(100% / var(--slideCount) - var(--sliderGutter));
+    width: calc(100% / var(--slideCount) - var(--sliderGutter)) !important;
 		height: auto;
 	}
 	&__item {
@@ -124,6 +119,33 @@
 			max-width: rem(718);
 			line-height: 1.37;
 			margin-bottom: 0;
+		}
+	}
+	.splide {
+		.splide {
+			&__track {
+				overflow: visible;
+			}
+		}
+		&__list {
+			--slideCount: 1;
+			--sliderGutter: 0px;
+			overflow: visible;
+			margin-right: calc(var(--sliderGutter) * -1) !important;
+			@include media-breakpoint-up(sm) {
+				--slideCount: 2;
+				--sliderGutter: #{rem(10)};
+				margin-bottom: rem(10);
+			}
+			@include media-breakpoint-up(md) {
+				--slideCount: 3;
+			}
+			@include media-breakpoint-up(lg) {
+				--slideCount: 4;
+			}
+		}
+		.splide__pagination {
+			display: none;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

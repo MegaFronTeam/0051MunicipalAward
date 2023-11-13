@@ -25,36 +25,41 @@
 	}
 	&__swiper {
 		overflow: visible;
-		max-width: max-content;
 		margin-left: auto;
 		margin-right: auto;
 		padding-bottom: rem(103);
+		@include media-breakpoint-down(sm) {
+			margin-left: calc(var(--bs-gutter-x) / -2);
+			margin-right: calc(var(--bs-gutter-x) / -2);
+		}
 		@include media-breakpoint-up(lg) {
 			padding-bottom: rem(127);
 		}
-		.swiper-pagination {
-			&-bullet {
-				--swiper-pagination-bullet-horizontal-gap: #{rem(5.5)};
+		.splide__pagination {
+			.splide__pagination__page {
+				@include mt;
 				width: rem(6);
 				height: rem(6);
-				background-color: #fff;
+				background: #fff;
+				opacity: 1;
 				@include media-breakpoint-up(lg) {
-					--swiper-pagination-bullet-horizontal-gap: #{rem(12)};
 					width: rem(13);
 					height: rem(13);
 				}
-				&-active, &:hover {
+				&.is-active, &:hover {
 					background-color: #000;
+					transform: scale(1);
 				}
 			}
 		}
-		.swiper-button-hand {
+		.splide__arrow {
 			background-color: transparent;
 			border: none;
 			width: rem(26);
 			height: rem(26);
 			box-shadow: none;
-			top: rem(-318.266);
+			top: rem(149);
+			opacity: 1;
 			
 			--swiperArrowPosition: 0;
 			--swiperColorDef: #fff;
@@ -63,26 +68,37 @@
 			@include media-breakpoint-up(lg) {
 				width: rem(42);
 				height: rem(42);
-				top: rem(-283);
+				top: rem(309);
 			}
 			.icon {
 				height: 1em;
 				width: 1em;
 				fill: none;
-				stroke: currentColor;
+				stroke: var(--swiperColorDef);
 				stroke-width: 3px;
 				font-size: rem(26);
+				&:hover {
+					stroke: var(--swiperColorDefHover);
+				}
 				@include media-breakpoint-up(lg) {
 					font-size: rem(42);
 				}
 			}
+			&--prev {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+	.splide {
+		&__track {
+			overflow: visible;
+			max-width: rem(300);
+			margin: 0 auto;
 		}
 	}
 	&__slide {
-		max-width: max-content;
-		margin-left: auto;
-		margin-right: auto;
-		&.swiper-slide-active {
+		width: 100%;
+		&.active-slide-animated{
 			.sSupervisory__item {
 				transform: scale(1);
 				.h6, p {

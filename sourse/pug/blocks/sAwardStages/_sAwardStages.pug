@@ -5,20 +5,21 @@ mixin sAwardStages(data)
 			+b.section-title
 				.h6 Этапы премии
 			mixin slide(date, title)
-				+e.slide.swiper-slide
+				li.sAwardStages__slide.splide__slide
 					+e.item(href='#')
 						+e.date!= date
 						.h4!= title
-			+e.swiper.def-slider-js.swiper
-				.swiper-wrapper
-					+slide('1&nbsp;ноября&nbsp;&mdash; 24&nbsp;ноября', 'Подача заявок участниками')
-					+slide('24 ноября', 'Анализ заявок на&nbsp;соответствие критериям номинаций с&nbsp;применением искусственного интеллекта')
-					+slide('24&nbsp;ноября&nbsp;&mdash; 3&nbsp;декабря', 'Техническая экспертиза')
-					+slide('4&nbsp;&mdash; 7&nbsp;декабря', 'Экспертиза участниками')
-					+slide('1&nbsp;ноября&nbsp;&mdash; 24&nbsp;ноября', 'Подача заявок участниками')
-					+slide('24 ноября', 'Анализ заявок на&nbsp;соответствие критериям номинаций с&nbsp;применением искусственного интеллекта')
-					+slide('24&nbsp;ноября&nbsp;&mdash; 3&nbsp;декабря', 'Техническая экспертиза')
-					+slide('4&nbsp;&mdash; 7&nbsp;декабря', 'Экспертиза участниками')
+			+e.swiper.def-slider-js.splide
+				.splide__track
+					ul.splide__list
+						+slide('1&nbsp;ноября&nbsp;&mdash; 24&nbsp;ноября', 'Подача заявок участниками')
+						+slide('24 ноября', 'Анализ заявок на&nbsp;соответствие критериям номинаций с&nbsp;применением искусственного интеллекта')
+						+slide('24&nbsp;ноября&nbsp;&mdash; 3&nbsp;декабря', 'Техническая экспертиза')
+						+slide('4&nbsp;&mdash; 7&nbsp;декабря', 'Экспертиза участниками')
+						+slide('1&nbsp;ноября&nbsp;&mdash; 24&nbsp;ноября', 'Подача заявок участниками')
+						+slide('24 ноября', 'Анализ заявок на&nbsp;соответствие критериям номинаций с&nbsp;применением искусственного интеллекта')
+						+slide('24&nbsp;ноября&nbsp;&mdash; 3&nbsp;декабря', 'Техническая экспертиза')
+						+slide('4&nbsp;&mdash; 7&nbsp;декабря', 'Экспертиза участниками')
 				+arrow
 			+e.text: p Lorem ipsum dolor sit amet consectetur. Semper montes enim risus fusce tortor tincidunt cursus. Laoreet sit netus et&nbsp;sit hendrerit. Eget id&nbsp;ac&nbsp;quis dui ornare enim nibh interdum nunc. Ut&nbsp;ipsum bibendum parturient ut&nbsp;nulla eu&nbsp;sed diam.
 	// end sAwardStages
