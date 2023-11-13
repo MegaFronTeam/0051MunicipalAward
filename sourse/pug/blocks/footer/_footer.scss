@@ -1,6 +1,6 @@
 .footer {
-	padding-block: rem(31) rem(40);
-	background-color: $dark;
+	padding-block: rem(51) rem(40);
+	background-color: #1F1F29;
 	color: $white;
 	margin-top: auto;
 	text-align: center;
@@ -8,74 +8,137 @@
 		padding-block: rem(70);
 		text-align: left;
 	}
-	&__row {
-		padding-bottom: rem(65);
-		border-bottom: 1px solid #fff;
+	&__top-row {
+		padding-bottom: 47px;
+		align-items: start;
+		border-bottom: 1px solid $white;
+	}
+	&__btn-col {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 47px;
 		@include media-breakpoint-up(md) {
-			padding-bottom: rem(53);
+			margin-bottom: 0;
+			flex-direction: row;
+
 		}
-		.row {
-			--bs-gutter-y: #{rem(64)};
+		span {
+			color: $gold;
+			font-size: rem(13);
+			text-transform: uppercase;
 		}
 	}
-	span {
-		font-size: rem(12);
-		display: block;
-		line-height: normal;
+	&__btn {
+		margin-bottom: 10px;
+		padding-inline: 32px;
 		@include media-breakpoint-up(md) {
-			vertical-align: top;
-			display: inline;
+			margin-bottom: 0;
+			margin-right: 22px;
 		}
 	}
-	&__logo-wrap {
-		display: inline-block;
-		margin-top: rem(37);
+	.soc {
+		padding-top: rem(50);
+		justify-content: center;
+		border-top: 1px solid $white;
 		@include media-breakpoint-up(md) {
-			margin-left: rem(45);
-			margin-top: 0;
+			padding-top: 0;
+			justify-content: flex-end;
+			border: none;
+		}
+	}
+	.soc__item {
+		color: $white;
+		&:hover {
+			color: $gold;
+		}
+	}
+
+	&__contact-row {
+		--bs-gutter-y: #{rem(45)};
+		padding-block: rem(47);
+		border-bottom: 1px solid $white;
+		@include media-breakpoint-up(md) {
+			padding-block: rem(74);
+		}
+		@include media-breakpoint-up(xl) {
+			justify-content: space-between;
+		}
+	}
+	&__mail-col {
+		span {
+			display: block;
+			color: $gold;
 		}
 	}
 	&__mail {
-		display: inline-block;
-		font-size: rem(25);
-		line-height: 1;
-		color: #fff;
-		margin-top: rem(22);
+		color: $white;
+		font-size: rem(20);
 		@include media-breakpoint-up(md) {
-			margin-left: rem(58);
-			margin-top: 0;
+			font-size: rem(30);
 		}
 		&:hover {
 			color: $gold;
 		}
 	}
 	&__bottom-row {
-		padding-top: rem(18);
+		padding-top: 44px;
+		align-items: flex-end;
+		font-size: rem(12);
+		--bs-gutter-y: #{rem(20)};
+		@include media-breakpoint-up(sm) {
+			--bs-gutter-y: #{rem(45)};
+		}
+	}
+	&__logo-col {
+		display: flex;
+		justify-content: center;
 		align-items: center;
-		@include media-breakpoint-up(md) {
-			padding-top: rem(54);
+		flex-direction: column;
+		padding-bottom: 47px;
+		border-bottom: 1px solid $white;
+		@include media-breakpoint-up(sm) {
+			padding-bottom: 0;
+			flex-direction: row;
+			border-bottom: none;
+		}
+		@include media-breakpoint-up(lg) {
+			align-items: flex-end;
+			justify-content: flex-start;
 		}
 		span {
-			margin-top: rem(41);
-			@include media-breakpoint-up(md) {
-				vertical-align: middle;
-				margin-top: 0;
+			margin-bottom: 20px;
+			@include media-breakpoint-up(sm) {
+				margin-bottom: 0;
+				margin-right: 39px;
 			}
 		}
 	}
-	&__link {
-		font-size: rem(12);
+	&__logo-wrap {
+		width: 117px;
+		@include media-breakpoint-up(md) {
+			width: 106px;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+	&__bottom-link {
 		display: block;
-		color: #fff;
-		line-height: normal;
+		color: $white;
+		@include media-breakpoint-up(sm) {
+			display: inline;
+		}
+		&:not(:last-child) {
+			@include media-breakpoint-up(md) {
+				margin-right: 20px;
+			}
+			@include media-breakpoint-up(lg) {
+				margin-right: 70px;
+			}
+		}
 		&:hover {
 			color: $gold;
-		}
-		@include media-breakpoint-up(md) {
-			display: inline;
-			&:first-child {
-				margin-right: rem(42);
-			}
 		}
 	}
 // 

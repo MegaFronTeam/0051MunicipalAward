@@ -1,18 +1,28 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			+e.row
-				.row
-					.col-md
-						span Организатор
-						+e.logo-wrap(href="#")
-							+img('img/svg/logo-varmsu.svg')
-					.col-md-auto
-						span Контакты
-						+e.mail(href="mailto:support@spremia.ru") support@spremia.ru
+			+e.top-row.row
+				+e.btn-col.col-md
+					+e.btn.btn.btn-gold(href="#") Подать заявку
+					span до 13 декабря
+				.col-md.text-end
+					+soc()
+			+e.contact-row.row
+				mixin contactItem(term, def)
+					+e.mail-col.col-12.col-sm-6.col-xl-auto
+						span=term
+						+e.mail(href=`mailto:${def}`)= def
+				+contactItem('Участникам','support@spremia.ru')
+				+contactItem('CМИ','pr@spremia.ru')
+				+contactItem('Партнерам','partners@spremia.ru')
+				+contactItem('Общие вопросы','org@spremia.ru')
 			+e.bottom-row.row
-				.col-md.order-last.order-md-first
+				+e.logo-col.col-12.col-lg
+					span Организатор
+					+e.logo-wrap(href="#")
+						+img('img/svg/logo-varmsu.svg')
+				.col-12.col-sm-6.col-lg.order-last.order-sm-0
 					span Премия Служение 2023 ©
-				.col-md-auto
-					+e.link(href="#") Политика конфиденциальности
-					+e.link(href="#") Публичная оферта
+				.col-12.col-sm-6.col-lg-auto.text-lg-end
+					+e.bottom-link(href="#") Участникам
+					+e.bottom-link(href="#") Политика конфиденциальности
