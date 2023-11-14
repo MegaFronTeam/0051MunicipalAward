@@ -43,11 +43,14 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t)
+mixin page-head(t, defaultBg=true)
 	+b.page-head.bg-wrap
-		picture.picture-bg
-			source(media="(min-width: 768px)", srcset="img/pageHead-bg.png")
-			img(src="img/pageHead-bg-sm.png", alt="").object-fit-js
+		if defaultBg
+			picture.picture-bg
+				source(media="(min-width: 768px)", srcset="img/pageHead-bg.png")
+				img(src="img/pageHead-bg-sm.png", alt="").object-fit-js
+		else
+			block
 		.container
 			//- +breadcrumb('Главная',...items)
 

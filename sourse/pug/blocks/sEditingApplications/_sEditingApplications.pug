@@ -1,0 +1,18 @@
+mixin sEditingApplications(data)
+	// start sEditingApplications
+	+b.SECTION.sEditingApplications.section#sEditingApplications&attributes(attributes)
+		.container
+			table
+				tr
+					th Номинация
+					th Название проекта
+				mixin tr(key, val)
+					tr
+						td!=key
+						td
+							!=val
+							+e.edit(href='#'): +icon('edit')
+				+tr('Мой край — моя гордость', 'Мой край — моя гордость')
+				+tr('Мой край — моя гордость', 'Мой край — моя гордость')
+				+tr('Мой край — моя гордость', 'Мой край — моя гордость, название будет длинное или короткое, никто не знает')
+	// end sEditingApplications

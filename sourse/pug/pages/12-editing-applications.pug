@@ -1,0 +1,23 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sEditingApplications/_sEditingApplications.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '08-steps.jpg'
+
+block title
+	- let  title= 'Редактирование заявок'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Редактирование заявок', false)
+			+e.bg.picture-bg: +img('img/pageHead-bg-2.png', 'bg')
+		+sEditingApplications
+	+parts('footer')
