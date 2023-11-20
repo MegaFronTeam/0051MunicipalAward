@@ -17,6 +17,26 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(139 / #{$h} *1em );
 }
+.iconC-sContact-icon-1 {
+	$h: 59;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(91 / #{$h} *1em );
+}
+.iconC-sContact-icon-2 {
+	$h: 70;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(80 / #{$h} *1em );
+}
+.iconC-sContact-icon-3 {
+	$h: 62;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(92 / #{$h} *1em );
+}
+.iconC-sContact-icon-4 {
+	$h: 80;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(80 / #{$h} *1em );
+}
 .iconC-telegram {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

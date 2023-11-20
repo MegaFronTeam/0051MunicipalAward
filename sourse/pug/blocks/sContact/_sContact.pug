@@ -2,8 +2,19 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			+e.row.row
+				mixin item(icon, title, email)
+					+e.item(href=`mailto:${email}`)
+						+iconC(`sContact-icon-${icon}`)
+						div 
+							.h2!= title
+							span!= email
+				.col-sm-6
+					+item(1, 'Участникам', 'support@spremia.ru')
+				.col-sm-6
+					+item(2, 'CМИ', 'pr@spremia.ru')
+				.col-sm-6
+					+item(3, 'Партнерам', 'partners@spremia.ru')
+				.col-sm-6
+					+item(4, 'Общие вопросы', 'org@spremia.ru')
 	// end sContact

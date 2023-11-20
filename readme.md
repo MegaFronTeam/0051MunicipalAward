@@ -15,3 +15,4 @@
 1. <https://megafronteam.github.io/0051MunicipalAward/public/10-news.html>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/11-news-item.html>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/12-editing-applications.html>
+1. <https://megafronteam.github.io/0051MunicipalAward/public/13-contacts.html>

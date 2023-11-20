@@ -1,0 +1,22 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContact/_sContact.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '08-steps.jpg'
+
+block title
+	- let  title= 'Контакты'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Контакты')
+		+sContact
+	+parts('footer')
