@@ -8,7 +8,7 @@ mixin ddGroup()
 			+ddGroupItem('вопрос2')
 			+ddGroupItem('вопрос3')
 
-mixin ddGroupItem(txt, activeClasses='', span)
+mixin ddGroupItem(txt, activeClasses='', span,btn)
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
 	+e.item(class=activeClasses)
@@ -16,6 +16,8 @@ mixin ddGroupItem(txt, activeClasses='', span)
 			if span
 				span!=span
 			!=txt
+			if btn
+				a(href="#").btn.btn-secondary Кнопка 
 		+e.content.dd-content-js(class=activeClasses)
 			if block
 				block
