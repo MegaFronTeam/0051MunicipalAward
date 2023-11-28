@@ -33,9 +33,13 @@
 			line-height: 2;
 			padding: rem(23) rem(50) rem(23) ;
 			cursor: pointer;
-			display: flex;
+			// display: flex;
 			position: relative;
-			flex-wrap: wrap;
+			// flex-wrap: wrap;
+			// align-items: center;
+			.row{
+				align-items: center;
+			}
 			.btn{
 				@include media-breakpoint-up(sm) {
 					margin-left: auto;

@@ -13,11 +13,14 @@ mixin ddGroupItem(txt, activeClasses='', span,btn)
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
 	+e.item(class=activeClasses)
 		+e.head.dd-head-js
-			if span
-				span!=span
-			!=txt
-			if btn
-				a(href="#").btn.btn-secondary Кнопка 
+			.row 
+				.col
+					if span
+						span!=span
+					!=txt
+				if btn
+					.col-md-auto
+						a(href="#").btn.btn-secondary Кнопка 
 		+e.content.dd-content-js(class=activeClasses)
 			if block
 				block
