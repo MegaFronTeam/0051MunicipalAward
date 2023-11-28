@@ -98,7 +98,7 @@
 	}
 	&__slide {
 		width: 100%;
-		&.active-slide-animated{
+		&.is-active{
 			.sSupervisory__item {
 				transform: scale(1);
 				.h6, p {
