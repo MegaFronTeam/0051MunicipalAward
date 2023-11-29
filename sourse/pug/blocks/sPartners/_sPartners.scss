@@ -44,7 +44,17 @@
 		}
 	}
 	.partner-item {
+		img{
+			@include mt;
+			scale: 1;
+		}
+		&:hover{
+			img{
+				scale: 1.08;
+			}
+		}
 		--cardCount: 2;
+
 		@include media-breakpoint-up(sm) {
 			--cardCount: 3;
 		}
