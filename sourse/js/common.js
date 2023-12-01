@@ -123,6 +123,15 @@ function eventHandler() {
 					};
 				});
 			};
+
+			if (!sApplicationsMapTarget && !sApplicationsCardTarget) {
+				sApplicationsMapClass.forEach((mapClass) => {
+					mapClass.classList.remove('active');
+				});
+				sApplicationsCards.forEach((cardsClass) => {
+					cardsClass.classList.remove('active');
+				});
+			}
 		});
 	}
 
