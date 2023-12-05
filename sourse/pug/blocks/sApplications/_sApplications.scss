@@ -40,7 +40,7 @@
 		g {
 			&.reg-1, &.reg-2, &.reg-3, &.reg-4, &.reg-5, &.reg-6, &.reg-7, &.reg-8, &.reg-9 {
 				&:hover, &.active {
-					& > path {
+					& > path, .color > path {
 						fill: $primary;
 						stroke: $primary;
 						filter: drop-shadow(0px 0px 13px #D2A35F);
@@ -58,12 +58,21 @@
 			&.reg-3 {
 				transform: translateY(498px) translateX(44px);
 			}
+			&.reg-8 {
+				transform: translateX(758px);
+				.line-8 {
+					transform: translateX(-758px);
+				}
+			}
 			&.reg-9 {
 				transform: translateX(0px) translateY(474px);
 			}
 			g {
 				@include mt;
 				opacity: 0;
+			}
+			.color {
+				opacity: 1;
 			}
 		}
 		path {
