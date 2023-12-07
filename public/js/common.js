@@ -146,13 +146,14 @@ function eventHandler() {
 	}
 	inputFile();
 
-	let imgContainer = document.querySelector('.page-head__bg');
+	let imgContainer = document.querySelector('.page-head--img');
+	let headerBg = imgContainer.querySelector('.page-head__bg')
 	let stopEvent = false;
 	imgContainer.addEventListener('mousemove', function(e) {
 		if (!stopEvent) {
 			let x = e.clientX / window.innerWidth;
 			let y = e.clientY / window.innerHeight;
-			imgContainer.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+			headerBg.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
 			stopEvent = true;
 			setTimeout(function () {
 				stopEvent = false;

@@ -44,17 +44,17 @@ mixin search()
 				+icon("search")
 
 mixin page-head(t, defaultBg=true)
-	+b.page-head.bg-wrap
-		if defaultBg
+	if defaultBg
+		+b.page-head.bg-wrap
 			picture.picture-bg
 				source(media="(min-width: 768px)", srcset="img/pageHead-bg.png")
 				img(src="img/pageHead-bg-sm.png", alt="").object-fit-js
-		else
+	else
+		+b.page-head--img.bg-wrap
 			block
-		.container
-			//- +breadcrumb('Главная',...items)
-
-			h1!= t
+			.container
+				//- +breadcrumb('Главная',...items)
+				h1!= t
 
 mixin parts(elem)
 	script.
