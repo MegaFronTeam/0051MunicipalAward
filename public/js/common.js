@@ -148,7 +148,7 @@ function eventHandler() {
 
 	let imgContainer = document.querySelector('.page-head__bg');
 	let stopEvent = false;
-	window.addEventListener('mousemove', function(e) {
+	imgContainer.addEventListener('mousemove', function(e) {
 		if (!stopEvent) {
 			let x = e.clientX / window.innerWidth;
 			let y = e.clientY / window.innerHeight;
