@@ -150,64 +150,7 @@
 			display: block;
 		}
 	}
-	&__project-item{
-		display: flex;
-		flex-wrap: wrap;
-		padding: rem(16) rem(29);
-		height: 100%;
-		min-height: 227px;
-		border: 1px solid $body-color;
-		@include media-breakpoint-up(md) {
-			padding: rem(20);
-		}
-	}
-	&__project-name {
-		width: calc(100% - 32px);
-		margin-bottom: 20px;
-		@include media-breakpoint-up(md) {
-			width: calc(100% - 40px);
-		}
-	}
-	&__project-menu {
-		position: relative;
-		width: 19px;
-		height: 27px;
-		top: 7px;
-		margin-left: 13px;
-		span {
-			display: block;
-			height: 1px;
-			width: 100%;
-			background-color: $body-color;
-		}
-		@include media-breakpoint-up(md) {
-			width: 27px;
-		}
-		&::after,
-		&::before {
-			position: absolute;
-			content: '';
-			height: 1px;
-			width: 19px;
-			background-color: $body-color;
-			left: 0;
-			top: 8px;
-			@include media-breakpoint-up(md) {
-				top: 9px;
-				width: 27px;
-			}
-		}
-		&::before {
-			top: 17px;
-			@include media-breakpoint-up(md) {
-				top: 19px;
-			}
-		}
-	}
-	&__project-btn {
-		margin-top: auto;
-		width: 100%;
-	}
+	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

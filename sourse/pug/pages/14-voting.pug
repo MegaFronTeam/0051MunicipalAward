@@ -1,0 +1,23 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sVoting/_sVoting.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '08-steps.jpg'
+
+block title
+	- let  title= 'Народное голосование'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Народное голосование', false)
+			+e.bg.picture-bg: +img('img/pageHead-bg-2.png', 'bg')
+		+sVoting('btn')
+	+parts('footer')

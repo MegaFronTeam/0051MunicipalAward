@@ -1,0 +1,23 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sExpertise/_sExpertise.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '08-steps.jpg'
+
+block title
+	- let  title= 'Перекрёстная экспертиза'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Перекрёстная экспертиза', false)
+			+e.bg.picture-bg: +img('img/pageHead-bg-3.jpg', 'bg')
+		+sExpertise('btn')
+	+parts('footer')

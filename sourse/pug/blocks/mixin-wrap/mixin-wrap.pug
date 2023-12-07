@@ -90,11 +90,11 @@ mixin partnerItem(img)
 			+img(`img/svg/${img}`).res-i
 
 mixin rating(title)
-				+b.shortlist
-					+b.section-title
-						h2= title
-					if block
-						block
+	+b.shortlist
+		+b.section-title
+			h2= title
+		if block
+			block
 
 mixin uploadAvatar(initials)
 	+b.upload-avatar
@@ -106,3 +106,14 @@ mixin uploadAvatar(initials)
 				+img('', 'bg')
 			+e.file-name +
 		+e.delete-photo Удалить фото
+
+mixin projectItem(name, btn="true",check)
+	.col-sm-6.col-md-4.col-lg-3
+		+b.project-item
+			+e.name= name
+			+e.menu(href="#")
+				span
+			if btn
+				+e.btn.btn.btn-gold(href="#") Голосовать
+			if check
+				+in-c()

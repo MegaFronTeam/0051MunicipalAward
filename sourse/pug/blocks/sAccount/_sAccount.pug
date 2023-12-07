@@ -15,13 +15,13 @@ mixin sAccount(data)
 					+input('', 'tel', 'Телефон')(value="+7 (000) 000 00 00")
 			+rating('Мой край — моя гордость')
 				.sAccount__project-row.row
-					mixin projectItem(name)
-						.sAccount__col.col-sm-6.col-md-4.col-lg-3
-							.sAccount__project-item
-								.sAccount__project-name= name
-								a.sAccount__project-menu(href="#")
-									span
-								a.sAccount__project-btn.btn.btn-gold(href="#") Голосовать
+					//- mixin projectItem(name)
+					//- 	.sAccount__col.col-sm-6.col-md-4.col-lg-3
+					//- 		.sAccount__project-item
+					//- 			.sAccount__project-name= name
+					//- 			a.sAccount__project-menu(href="#")
+					//- 				span
+					//- 			a.sAccount__project-btn.btn.btn-gold(href="#") Голосовать
 					+projectItem('Название проекта 1 может быть разного размера')
 					+projectItem('Название проекта 2')
 					+projectItem('Название проекта 3')

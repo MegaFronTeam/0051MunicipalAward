@@ -1,0 +1,47 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sVoting/_sVoting.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '08-steps.jpg'
+
+block title
+	- let  title= 'Народное голосование'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Народное голосование', false)
+			+e.bg.picture-bg: +img('img/pageHead-bg-2.png', 'bg')
+		+sVoting
+			+rating('Мой край — моя гордость')
+				+e.row.row
+					+projectItem('Название проекта 1 может быть разного размера',false,'check')
+					+projectItem('Название проекта 2',false,'check')
+					+projectItem('Название проекта 3',false,'check')
+					+projectItem('Название проекта 4',false,'check')
+					+projectItem('Название проекта 1',false,'check')
+					+projectItem('Название проекта 2',false,'check')
+					+projectItem('Название проекта 3',false,'check')
+					+projectItem('Название проекта 4',false,'check')
+					+projectItem('Название проекта 3',false,'check')
+					+projectItem('Название проекта 4',false,'check')
+			+rating('Мой край — моя гордость')
+				+e.row.row
+					+projectItem('Название проекта 1 может быть разного размера',false,'check')
+					+projectItem('Название проекта 2',false,'check')
+					+projectItem('Название проекта 3',false,'check')
+					+projectItem('Название проекта 4',false,'check')
+					+projectItem('Название проекта 1',false,'check')
+					+projectItem('Название проекта 2',false,'check')
+					+projectItem('Название проекта 3',false,'check')
+					+projectItem('Название проекта 4',false,'check')
+					+projectItem('Название проекта 3',false,'check')
+					+projectItem('Название проекта 4',false,'check')
+	+parts('footer')

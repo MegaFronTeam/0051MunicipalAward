@@ -1,0 +1,47 @@
+mixin sVoting(btn)
+	// start sVoting
+	+b.SECTION.sVoting.section#sVoting&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-6
+					+e.motto Твой голос —<br> героям муниципалитетов
+					if btn
+						+e.btn.btn.btn-gold(href="#") Проголосовать
+				.col-lg-6
+					+e.descr
+						p Муниципальные служащие&nbsp;&mdash; лицо всей вертикали власти, источник помощии&nbsp;поддержки для граждан, гарант благополучия людей в&nbsp;каждом регионе,городе или посёлке.
+						p Быть представителем муниципальной власти&nbsp;&mdash; значит быть героем в&nbsp;глазах соотечественников и&nbsp;отдавать людям самое ценное&nbsp;&mdash; своё время и&nbsp;силы.
+						p На&nbsp;них лежит ответственность за&nbsp;принятие решений,качество жизни и&nbsp;безопасность людей.
+						p Именно вы&nbsp;можете проголосовать за&nbsp;настоящих героевмуниципалитетов&nbsp;&mdash; тех, кто достойно несёт службу на&nbsp;местах.
+			+e.project-list.UL
+				if block
+					block
+				else
+					+rating('Мой край — моя гордость')
+						+e.row.row
+							+projectItem('Название проекта 1 может быть разного размера',false)
+							+projectItem('Название проекта 2',false)
+							+projectItem('Название проекта 3',false)
+							+projectItem('Название проекта 4',false)
+							+projectItem('Название проекта 1',false)
+							+projectItem('Название проекта 2',false)
+							+projectItem('Название проекта 3',false)
+							+projectItem('Название проекта 4',false)
+							+projectItem('Название проекта 3',false)
+							+projectItem('Название проекта 4',false)
+					+rating('Мой край — моя гордость')
+						+e.row.row
+							+projectItem('Название проекта 1 может быть разного размера',false)
+							+projectItem('Название проекта 2',false)
+							+projectItem('Название проекта 3',false)
+							+projectItem('Название проекта 4',false)
+							+projectItem('Название проекта 1',false)
+							+projectItem('Название проекта 2',false)
+							+projectItem('Название проекта 3',false)
+							+projectItem('Название проекта 4',false)
+							+projectItem('Название проекта 3',false)
+							+projectItem('Название проекта 4',false)
+			+e.btn-wrap
+				+e.btn.btn.btn-gold(href="#") Проголосовать
+			
+	// end sVoting
