@@ -1,0 +1,44 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sExpertise/_sExpertise.pug
+
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '08-steps.jpg'
+
+block title
+	- let  title= 'Экспертная оценка'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Экспертная оценка', false)
+			+e.bg.picture-bg: +img('img/pageHead-bg-4.jpg', 'bg')
+		+sExpertise().sExpertise--review
+			+form-wrap
+				+e.title Оцените проекты номинантов по следующим критериям
+				.row
+					.col-md-6
+						.sExpertise__nomination #[span Номинация] «Мой край — моя гордость»
+					.col-md-6
+						p Проекты, направленные на популяризацию края, создание уникального образа территории, развитие туризма и культуры.
+				+e.items-list.UL
+					+e.item.LI
+						+question('Есть&nbsp;ли у&nbsp;проекта/управленческого решения бренд территории? <span>(вес вопроса&nbsp;20)</span>','','terr')
+							+e.check-group
+								+in-c('radio','Да')(name="terr")
+								+in-c('radio','Нет')(name="terr" checked)
+							+ranking
+					+e.item.LI
+						+question('Есть&nbsp;ли у&nbsp;проекта/управленческого решения актуальные формы популяризации края?<span>(вес&nbsp;вопроса&nbsp;20)</span>','','forms')
+					+e.item.LI
+						+question('Какой уровень информационной активности проекта/управленческого решения в&nbsp;рамках популяризации края?<span>(вес вопроса&nbsp;20)</span>','','level')
+							+ranking
+				+e.btn.btn.btn-gold.BUTTON следующая номинация
+					
+	+parts('footer')

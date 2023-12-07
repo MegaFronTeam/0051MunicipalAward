@@ -117,3 +117,11 @@ mixin projectItem(name, btn="true",check)
 				+e.btn.btn.btn-gold(href="#") Голосовать
 			if check
 				+in-c()
+
+mixin ranking
+	+b.ranking
+		+e.descr Оцените от 1 до 10, где 1 самая низкая оценка проекта,<br/> а 10 самая высокая
+		+e.row
+			- var x = 1;
+			while x <= 10
+				+in-c('radio',x++)(name="ranking")

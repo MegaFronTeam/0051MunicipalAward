@@ -18,4 +18,6 @@
 1. <https://megafronteam.github.io/0051MunicipalAward/public/13-contacts.html>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/14-voting.html>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/14-voting-2.html>
+1. <https://megafronteam.github.io/0051MunicipalAward/public/15-expertise.html>
+1. <https://megafronteam.github.io/0051MunicipalAward/public/16-review.html>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/00-modal.html>
