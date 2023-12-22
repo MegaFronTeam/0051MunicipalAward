@@ -5,14 +5,26 @@ mixin sApplications(data)
 			source(media="(min-width: 768px)", srcset="img/sApplications-bg.png")
 			img(src='img/sApplications-bg-sm.png' alt='bg')
 		.container-fluid
-			+b.section-title.text-center
-				h2 Всего подано заявок
-			+e.count
-				.number 0
-				.number 0
-				.number 8
-				.number 5
-				.number 2
+			.tabs
+				.tabs__caption.d-none.d-sm-flex
+					.tabs__btn.active Всего подано заявок
+					.tabs__btn Всего проголосовало
+				.tabs__content.active
+					+e.counter-title.d-sm-none Всего подано заявок
+					+e.count
+						.number 0
+						.number 0
+						.number 8
+						.number 5
+						.number 2
+				.tabs__content
+					+e.counter-title.d-sm-none Всего проголосовало
+					+e.count
+						.number 0
+						.number 0
+						.number 8
+						.number 5
+						.number 2
 			mixin item(text, count='25 532')
 				+e.item&attributes(attributes)
 					p!= text

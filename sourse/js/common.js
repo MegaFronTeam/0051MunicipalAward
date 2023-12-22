@@ -159,7 +159,7 @@ function eventHandler() {
 				setTimeout(function () {
 					stopEvent = false;
 				}, 33);
-			}
+			}ivm
 		});
 	}
 	
