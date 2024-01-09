@@ -106,10 +106,16 @@
 			&.reg-3 {
 				transform: translateY(498px) translateX(44px);
 			}
+			&.reg-7 {
+				transform: translate(455px, 204px);
+				& > g {
+					transform: translate(-455px,-204px);
+				}
+			}
 			&.reg-8 {
-				transform: translateX(758px);
+				transform: translateX(743px);
 				.line-8 {
-					transform: translateX(-758px);
+					transform: translateX(-743px);
 				}
 			}
 			&.reg-9 {
