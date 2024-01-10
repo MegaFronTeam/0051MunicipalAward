@@ -104,7 +104,10 @@
 				}
 			}
 			&.reg-3 {
-				transform: translateY(498px) translateX(44px);
+				transform: translateY(494px) translateX(0px);
+				& > g {
+					transform: translateX(44px);
+				}
 			}
 			&.reg-7 {
 				transform: translate(455px, 204px);
@@ -119,7 +122,10 @@
 				}
 			}
 			&.reg-9 {
-				transform: translateX(0px) translateY(474px);
+				transform: translateX(12px) translateY(474px);
+				& > g {
+					transform: translateX(12px);
+				}
 			}
 			g {
 				@include mt;
