@@ -50,6 +50,19 @@
 			// }
 		}
 	}
+	&--second {
+		.menu {
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(33)};
+			}
+			@include media-breakpoint-up(xxl) {
+				--bs-gutter-x: #{rem(33)};
+			}
+			a {
+				font-weight: 700;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

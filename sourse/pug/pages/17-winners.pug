@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sWinners/_sWinners.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Победители'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header-2')
+	main
+		+page-head('Победители', false)
+			+e.bg.picture-bg: +img('img/pageHead-bg-5.jpg', 'bg')
+		+sWinners
+	+parts('footer')
+      
+
+
+

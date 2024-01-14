@@ -1,0 +1,33 @@
+mixin sWinners(data)
+	// start sWinners
+	+b.SECTION.sWinners.section#sWinners&attributes(attributes)
+		.container
+			mixin item(title)
+				+e.item
+					.row
+						.col-md
+							.h3!= title
+							p Название проекта может быть в две строчки, в три строчки в четыре, если больше, то скрывается за...
+							span Северо-кавказский федеральный округ
+						.col-md-auto
+							+e.btn.btn.btn-gold(href='#') Подробнее
+			+e.wrap
+				+b.section-title
+					span НОМИНАЦИЯ
+					h2 Мой край — моя гордость
+				+e.items
+					+item('Первое место')
+					+item('Второе место')
+					+item('Третье место')
+			+e.wrap
+				+b.section-title
+					span СПЕЦИАЛЬНАЯ НОМИНАЦИЯ
+					h2 Судьба человека — гордость Отечества
+				+e.items
+					+item('Победитель')
+				+e.laureates
+					.h3 Лауреаты
+					.row
+						-for(let i = 1; i <= 9; i++)
+							+projectItem(`Название проекта ${i}`, false)
+	// end sWinners

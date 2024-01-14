@@ -1,8 +1,8 @@
 
-mixin mnu()
+mixin mnu(secondVariant)
 	nav&attributes(attributes)
 		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-			each link in nav
+			each link in (secondVariant ? nav2 : nav)
 				li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
 				if link.subnav
 					li.menu-item.menu-item-has-children

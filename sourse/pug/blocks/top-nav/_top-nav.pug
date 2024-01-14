@@ -17,7 +17,7 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(secondVariant) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
@@ -25,25 +25,31 @@ mixin top-nav()
 				.col.col-lg-auto
 					+e.logo(href='/'): +img('img/svg/logo.svg')
 				+e.col.col-auto.col-lg.order-lg-0.order-last
-					+mnu().d-none.d-lg-flex
+					+mnu(secondVariant).d-none.d-lg-flex
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							.row
 								.col-md-auto
 									+e.logo(href='/'): +img('img/svg/logo.svg')
 								+e.inner-col.col-md
-									+mnu()
+									+mnu(secondVariant)
 								+e.inner-col.col-md-auto.d-md-none
-									+e.btn.btn.btn-secondary(href='#') Подать заявку
-									+e.date до 13 декабря
+									if secondVariant
+										+e.btn.btn.btn-gold(href='#') Победители
+									else
+										+e.btn.btn.btn-secondary(href='#') Подать заявку
+										+e.date до 13 декабря
 								+e.inner-col.col-md-auto
 									+e.lk(href='#'): +icon('lk')
 								+e.inner-col--mnu-toggle.col-md-auto
 									+menu-toggle()
 				+e.btn-col.col-md-auto.order-last.order-md-0
-					+e.btn.btn.btn-secondary(href='#') Подать заявку
-					+e.date до 13 декабря
+					if secondVariant
+						+e.btn.btn.btn-gold(href='#') Победители
+					else
+						+e.btn.btn.btn-secondary(href='#') Подать заявку
+						+e.date до 13 декабря
 				.col-auto.d-none.d-md-block: +e.lk(href='#'): +icon('lk')
-				.col-auto.ms-auto
+				.col-auto.ms-auto(class=(secondVariant ? "d-lg-none" : ''))
 					+menu-toggle()
 	// end top-nav

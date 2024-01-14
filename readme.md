@@ -1,5 +1,9 @@
 # 0051MunicipalAward
- 
+#### New pages from 14.01.2024
+1. <https://megafronteam.github.io/0051MunicipalAward/public/index-2>
+2. <https://megafronteam.github.io/0051MunicipalAward/public/17-winners>
+
+-----
 1. <https://megafronteam.github.io/0051MunicipalAward/public>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/02-application>
 1. <https://megafronteam.github.io/0051MunicipalAward/public/02-application-2>

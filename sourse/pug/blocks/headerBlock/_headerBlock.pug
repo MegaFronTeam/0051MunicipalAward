@@ -17,3 +17,30 @@ mixin headerBlock()
 				+icon('circle-right')
 				p Проводится по&nbsp;поручению Президента и&nbsp;присваивается выдающимся представителям муниципального сообщества&nbsp;&mdash; людям, которые внесли особый вклад в&nbsp;развитие муниципальных образований и&nbsp;повышение качества жизни граждан.
 	// end headerBlock
+
+mixin headerBlock2()
+	// start headerBlock
+	+b.headerBlock--2.bg-wrap.section#headerBlock&attributes(attributes)
+		//- +img('img/headerBlock-bg.png','bg').picture-bg
+		picture.picture-bg
+			source(media="(min-width: 768px)", srcset="img/headerBlock-bg.png")
+			img(src="img/headerBlock-bg-sm.png", alt="").object-fit-js
+		.container
+			+e.head-row.row
+				.col-lg-6
+					h1 Всероссийская<br>#[+img('img/text-img-1.png')] муниципальная премия 
+						//- +img('img/text-img-2.png').text-img-2
+						picture
+							source(media="(min-width: 768px)", srcset="img/text-img-2.png")
+							img(src="img/text-img-2-sm.png", alt="").text-img-2
+						| «Служение»
+				.col-lg-6.d-none.d-lg-block
+					+e.wrap
+						p Проводится по&nbsp;поручению Президента и&nbsp;присваивается выдающимся представителям муниципального сообщества&nbsp;&mdash; людям, которые внесли особый вклад в&nbsp;развитие муниципальных образований и&nbsp;повышение качества жизни граждан.
+			+e.body-row.row
+				-for(let i = 0; i < 9; i++)
+					-for(let j = 1; j <= 4; j++)
+						+e.col.col-auto: +e.item: +img(`img/headerblock-img-${j}.jpg`, 'bg')
+				+e.col.col-auto: +e.item: +img(`img/headerblock-img-2.jpg`, 'bg')
+				.col-auto.d-none.d-md-block: +e.btn.btn.btn-gold(href='#') Победители
+	// end headerBlock
