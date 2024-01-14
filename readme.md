@@ -2,6 +2,7 @@
 #### New pages from 14.01.2024
 1. <https://megafronteam.github.io/0051MunicipalAward/public/index-2>
 2. <https://megafronteam.github.io/0051MunicipalAward/public/17-winners>
+3. <https://megafronteam.github.io/0051MunicipalAward/public/00-modal>
 
 -----
 1. <https://megafronteam.github.io/0051MunicipalAward/public>
